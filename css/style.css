@@ -91,8 +91,12 @@ button::-moz-focus-inner {
   -moz-user-select: none;
   -ms-user-select: none; }
 
+* {
+  box-sizing: border-box; }
+
 html, body {
-  height: 100%; }
+  height: 100%;
+  width: 100%; }
 
 body {
   display: flex;
@@ -101,15 +105,36 @@ body {
   justify-content: center;
   align-items: center;
   align-content: center;
-  background: linear-gradient(to right, #77baf8 0%, #20e5a3 100%);
-  font-family: 'Montserrat'; }
+  background: linear-gradient(to right, rgba(119, 186, 248, 0.4) 0%, rgba(0, 255, 179, 0.4) 100%), url("../media/backgroundimage-small.jpeg") center center no-repeat;
+  background-size: cover;
+  font-family: 'Montserrat';
+  color: white; }
 
 h1 {
   font-weight: bold;
   font-size: 40pt; }
 
-.curly {
-  font-size: 120pt; }
+.buttonskin {
+  opacity: 0;
+  padding: 5px;
+  transition: all .1s linear; }
+  .buttonskin:hover {
+    text-shadow: 2px 2px 7px black;
+    cursor: pointer; }
+  .buttonskin.clicked {
+    text-shadow: unset; }
+  .buttonskin:focus {
+    outline: 0; }
+  .buttonskin:after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0px;
+    background: transparent;
+    transition: width .3s ease-in-out, background-color .3s ease-in-out; }
+  .buttonskin:hover:after {
+    width: 100%;
+    background: white; }
 
 .mainpage {
   display: flex;
@@ -119,22 +144,21 @@ h1 {
   min-width: 270px; }
 
 .titles {
-  flex: 0 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
-  padding: 10px;
   font-size: 20pt;
-  border-right: 2px solid white; }
+  border-right: 2px solid white;
+  padding: 10px; }
 
 .menu {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding: 10px;
-  font-size: 20pt; }
+  font-size: 20pt;
+  padding: 10px; }
 
 @media (max-width: 740px) {
   .mainpage {

@@ -98,9 +98,15 @@
 //// End of the reseter
 
 $fontSize: 20pt;
+$fontColor: white;
+
+* {
+	box-sizing: border-box;
+}
 
 html, body {
 	height: 100%;
+	width: 100%;
 }
 
 body {
@@ -111,8 +117,11 @@ body {
 	align-items: center;
 	align-content: center;
 
-	background: linear-gradient(to right, rgb(119, 186, 248) 0%, rgb(32, 229, 163) 100%);
+	background: linear-gradient(to right, rgba(119, 186, 248, 0.4) 0%, rgba(0, 255, 179, 0.4) 100%), url("../media/backgroundimage-small.jpeg") center center no-repeat;
+	background-size: cover;
 	font-family: 'Montserrat';
+
+	color: $fontColor;
 }
 
 h1 {
@@ -120,8 +129,36 @@ h1 {
 	font-size: $fontSize * 2;
 }
 
-.curly {
-	font-size: $fontSize * 6;
+.buttonskin {
+	opacity: 0;
+	padding: 5px;
+	transition: all .1s linear;
+
+	&:hover {
+		text-shadow: 2px 2px 7px black;
+		cursor: pointer;
+	}
+
+	&.clicked{
+		text-shadow: unset;
+	}
+
+	&:focus {
+		outline:0;
+	}
+
+	&:after {
+		content: '';
+		display: block;
+		height: 2px;
+		width: 0px;
+		background: transparent;
+		transition: width .3s ease-in-out, background-color .3s ease-in-out;
+	}
+	&:hover:after {
+		width: 100%;
+		background: rgb(255, 255, 255);
+	}
 }
 
 .mainpage {
@@ -133,16 +170,13 @@ h1 {
 }
 
 .titles {
-	flex: 0 0 auto;
-
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: flex-end;
-	padding: 10px;
 	font-size: $fontSize;
-
 	border-right: 2px solid white;
+	padding: 10px;
 }
 
 .menu {
@@ -150,8 +184,9 @@ h1 {
 	flex-direction: column;
 	justify-content: center;
 	align-items: flex-start;
-	padding: 10px;
 	font-size: $fontSize;
+
+	padding: 10px;
 
 }
 
