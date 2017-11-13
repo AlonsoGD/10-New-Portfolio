@@ -23,9 +23,16 @@ $(document).ready(function () {
 
     // introAnimation();
 
+    function buttonsAnimation () {
+        $buttons.css('opacity', '1');
+        $buttons.addClass('animated fadeInRight');
+    }
+
+
     $titles.addClass('animated fadeInUp');
-    $buttons.css('opacity', '1');
-    $buttons.addClass('animated fadeInRight');
+
+    setTimeout(buttonsAnimation, 500);
+
     // setTimeout(function () {
     //     $about.css('opacity', '1');
     //     $about.addClass('animated fadeInRight');
