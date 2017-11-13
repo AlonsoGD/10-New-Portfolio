@@ -1,13 +1,13 @@
 $(document).ready(function () {
     var $buttons = $('button');
 
+    // var $about = $('#about');
+    // var $skills = $('#skills');
+    // var $portfolio = $('#portfolio');
+    // var $didBefore = $('#didbefore');
+    // var $contact = $('#contact');
+    // var $titles =  $('.titles');
     //var $individualButtons = [$('#about'), $('#skills'), $('#portfolio'), $('#didbefore'), $('#contact')];
-    var $about = $('#about');
-    var $skills = $('#skills');
-    var $portfolio = $('#portfolio');
-    var $didBefore = $('#didbefore');
-    var $contact = $('#contact');
-    var $titles =  $('.titles');
 
     // function introAnimation () {
     //     var sleep = 400;
