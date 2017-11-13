@@ -1,13 +1,13 @@
 $(document).ready(function () {
     var $buttons = $('button');
 
-    // var $about = $('#about');
-    // var $skills = $('#skills');
-    // var $portfolio = $('#portfolio');
-    // var $didBefore = $('#didbefore');
-    // var $contact = $('#contact');
-    // var $titles =  $('.titles');
     //var $individualButtons = [$('#about'), $('#skills'), $('#portfolio'), $('#didbefore'), $('#contact')];
+    var $about = $('#about');
+    var $skills = $('#skills');
+    var $portfolio = $('#portfolio');
+    var $didBefore = $('#didbefore');
+    var $contact = $('#contact');
+    var $titles =  $('.titles');
 
     // function introAnimation () {
     //     var sleep = 400;
@@ -22,30 +22,30 @@ $(document).ready(function () {
     // }
 
     // introAnimation();
-    $('.titles').addClass('animated fadeInUp');
+    $titles.addClass('animated fadeInUp');
     setTimeout(function () {
-        $('#about').css('opacity', '1');
-        $('#about').addClass('animated fadeInRight');
+        $about.css('opacity', '1');
+        $about.addClass('animated fadeInRight');
     }, 500);
 
     setTimeout(function () {
-        $('#skills').css('opacity', '1');
-        $('#skills').addClass('animated fadeInRight');
+        $skills.css('opacity', '1');
+        $skills.addClass('animated fadeInRight');
     }, 600);
 
     setTimeout(function () {
-        $('#portfolio').css('opacity', '1');
-        $('#portfolio').addClass('animated fadeInRight');
+        $portfolio.css('opacity', '1');
+        $portfolio.addClass('animated fadeInRight');
     }, 700);
 
     setTimeout(function () {
-        $('#didbefore').css('opacity', '1');
-        $('#didbefore').addClass('animated fadeInRight');
+        $didBefore.css('opacity', '1');
+        $didBefore.addClass('animated fadeInRight');
     }, 800);
 
     setTimeout(function () {
-        $('#contact').css('opacity', '1');
-        $('#contact').addClass('animated fadeInRight');
+        $contact.css('opacity', '1');
+        $contact.addClass('animated fadeInRight');
     }, 900);
 
     //Click animations for the buttons;
