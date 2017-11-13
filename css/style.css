@@ -105,7 +105,7 @@ body {
   justify-content: center;
   align-items: center;
   align-content: center;
-  background: linear-gradient(to right, #77bcf8 0%, #00ffb3 100%);
+  background: url("../media/backgroundimage-small.jpeg") center center no-repeat;
   background-size: cover;
   font-family: 'Montserrat';
   color: white; }

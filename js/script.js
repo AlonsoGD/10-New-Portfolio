@@ -22,41 +22,32 @@ $(document).ready(function () {
     // }
 
     // introAnimation();
-
-    function buttonsAnimation () {
-        $buttons.css('opacity', '1');
-        $buttons.addClass('animated fadeInRight');
-    }
-
-
+    
     $titles.addClass('animated fadeInUp');
+    setTimeout(function () {
+        $about.css('opacity', '1');
+        $about.addClass('animated fadeInRight');
+    }, 500);
 
-    setTimeout(buttonsAnimation, 500);
+    setTimeout(function () {
+        $skills.css('opacity', '1');
+        $skills.addClass('animated fadeInRight');
+    }, 600);
 
-    // setTimeout(function () {
-    //     $about.css('opacity', '1');
-    //     $about.addClass('animated fadeInRight');
-    // }, 500);
+    setTimeout(function () {
+        $portfolio.css('opacity', '1');
+        $portfolio.addClass('animated fadeInRight');
+    }, 700);
 
-    // setTimeout(function () {
-    //     $skills.css('opacity', '1');
-    //     $skills.addClass('animated fadeInRight');
-    // }, 600);
+    setTimeout(function () {
+        $didBefore.css('opacity', '1');
+        $didBefore.addClass('animated fadeInRight');
+    }, 800);
 
-    // setTimeout(function () {
-    //     $portfolio.css('opacity', '1');
-    //     $portfolio.addClass('animated fadeInRight');
-    // }, 700);
-
-    // setTimeout(function () {
-    //     $didBefore.css('opacity', '1');
-    //     $didBefore.addClass('animated fadeInRight');
-    // }, 800);
-
-    // setTimeout(function () {
-    //     $contact.css('opacity', '1');
-    //     $contact.addClass('animated fadeInRight');
-    // }, 900);
+    setTimeout(function () {
+        $contact.css('opacity', '1');
+        $contact.addClass('animated fadeInRight');
+    }, 900);
 
     //Click animations for the buttons;
     $buttons
