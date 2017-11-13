@@ -92,7 +92,12 @@ button::-moz-focus-inner {
   -ms-user-select: none; }
 
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0); }
 
 html, body {
   height: 100%;
