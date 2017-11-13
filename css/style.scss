@@ -1,213 +1,208 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-	*/
-	html, body, div, span, applet, object, iframe,
-	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-	a, abbr, acronym, address, big, cite, code,
-	del, dfn, em, img, ins, kbd, q, s, samp,
-	small, strike, strong, sub, sup, tt, var,
-	b, u, i, center,
-	dl, dt, dd, ol, ul, li,
-	fieldset, form, label, legend,
-	table, caption, tbody, tfoot, thead, tr, th, td,
-	article, aside, canvas, details, embed, 
-	figure, figcaption, footer, header, hgroup, 
-	menu, nav, output, ruby, section, summary,
-	time, mark, audio, video {
-		margin: 0;
-		padding: 0;
-		border: 0;
-		font-size: 100%;
-		font: inherit;
-		vertical-align: baseline;
-	}
-	/* HTML5 display-role reset for older browsers */
-	article, aside, details, figcaption, figure, 
-	footer, header, hgroup, menu, nav, section {
-		display: block;
-	}
-	body {
-		line-height: 1;
-	}
-	ol, ul {
-		list-style: none;
-	}
-	blockquote, q {
-		quotes: none;
-	}
-	blockquote:before, blockquote:after,
-	q:before, q:after {
-		content: '';
-		content: none;
-	}
-	table {
-		border-collapse: collapse;
-		border-spacing: 0;
-	}
+// /* http://meyerweb.com/eric/tools/css/reset/ 
+//    v2.0 | 20110126
+//    License: none (public domain)
+// 	*/
+// 	html, body, div, span, applet, object, iframe,
+// 	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+// 	a, abbr, acronym, address, big, cite, code,
+// 	del, dfn, em, img, ins, kbd, q, s, samp,
+// 	small, strike, strong, sub, sup, tt, var,
+// 	b, u, i, center,
+// 	dl, dt, dd, ol, ul, li,
+// 	fieldset, form, label, legend,
+// 	table, caption, tbody, tfoot, thead, tr, th, td,
+// 	article, aside, canvas, details, embed, 
+// 	figure, figcaption, footer, header, hgroup, 
+// 	menu, nav, output, ruby, section, summary,
+// 	time, mark, audio, video {
+// 		margin: 0;
+// 		padding: 0;
+// 		border: 0;
+// 		font-size: 100%;
+// 		font: inherit;
+// 		vertical-align: baseline;
+// 	}
+// 	/* HTML5 display-role reset for older browsers */
+// 	article, aside, details, figcaption, figure, 
+// 	footer, header, hgroup, menu, nav, section {
+// 		display: block;
+// 	}
+// 	body {
+// 		line-height: 1;
+// 	}
+// 	ol, ul {
+// 		list-style: none;
+// 	}
+// 	blockquote, q {
+// 		quotes: none;
+// 	}
+// 	blockquote:before, blockquote:after,
+// 	q:before, q:after {
+// 		content: '';
+// 		content: none;
+// 	}
+// 	table {
+// 		border-collapse: collapse;
+// 		border-spacing: 0;
+// 	}
 
 
 
-	[role="button"],
-	input[type="submit"],
-	input[type="reset"],
-	input[type="button"],
-	button {
-		-webkit-box-sizing: content-box;
-		   -moz-box-sizing: content-box;
-				box-sizing: content-box;
-	}
+// 	[role="button"],
+// 	input[type="submit"],
+// 	input[type="reset"],
+// 	input[type="button"],
+// 	button {
+// 		-webkit-box-sizing: content-box;
+// 		   -moz-box-sizing: content-box;
+// 				box-sizing: content-box;
+// 	}
 	
-	/* Reset `button` and button-style `input` default styles */
-	input[type="submit"],
-	input[type="reset"],
-	input[type="button"],
-	button {
-		background: none;
-		border: 0;
-		color: inherit;
-		/* cursor: default; */
-		font: inherit;
-		line-height: normal;
-		overflow: visible;
-		padding: 0;
-		-webkit-appearance: button; /* for input */
-		-webkit-user-select: none; /* for button */
-		   -moz-user-select: none;
-			-ms-user-select: none;
-	}
-	input::-moz-focus-inner,
-	button::-moz-focus-inner {
-		border: 0;
-		padding: 0;
-	}
+// 	/* Reset `button` and button-style `input` default styles */
+// 	input[type="submit"],
+// 	input[type="reset"],
+// 	input[type="button"],
+// 	button {
+// 		background: none;
+// 		border: 0;
+// 		color: inherit;
+// 		/* cursor: default; */
+// 		font: inherit;
+// 		line-height: normal;
+// 		overflow: visible;
+// 		padding: 0;
+// 		-webkit-appearance: button; /* for input */
+// 		-webkit-user-select: none; /* for button */
+// 		   -moz-user-select: none;
+// 			-ms-user-select: none;
+// 	}
+// 	input::-moz-focus-inner,
+// 	button::-moz-focus-inner {
+// 		border: 0;
+// 		padding: 0;
+// 	}
 	
-	/* Make `a` like a button */
-	[role="button"] {
-		color: inherit;
-		cursor: default;
-		display: inline-block;
-		text-align: center;
-		text-decoration: none;
-		white-space: pre;
-		-webkit-user-select: none;
-		   -moz-user-select: none;
-			-ms-user-select: none;
-	}
+// 	/* Make `a` like a button */
+// 	[role="button"] {
+// 		color: inherit;
+// 		cursor: default;
+// 		display: inline-block;
+// 		text-align: center;
+// 		text-decoration: none;
+// 		white-space: pre;
+// 		-webkit-user-select: none;
+// 		   -moz-user-select: none;
+// 			-ms-user-select: none;
+// 	}
 	
-//// End of the reseter
+// //// End of the reseter
 
-$fontSize: 20pt;
-$fontColor: white;
+// $fontSize: 20pt;
+// $fontColor: white;
 
-* {
-	box-sizing: border-box;
-	-webkit-transform: translateZ(0);
-    -moz-transform: translateZ(0);
-    -ms-transform: translateZ(0);
-    -o-transform: translateZ(0);
-    transform: translateZ(0);
-}
+// * {
+// 	box-sizing: border-box;
+// }
 
-html, body {
-	height: 100%;
-	width: 100%;
-}
+// html, body {
+// 	height: 100%;
+// 	width: 100%;
+// }
 
-body {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
-	align-content: center;
+// body {
+// 	display: flex;
+// 	flex-direction: row;
+// 	flex-wrap: wrap;
+// 	justify-content: center;
+// 	align-items: center;
+// 	align-content: center;
 
-	background: linear-gradient(to right, rgba(119, 186, 248, 0.4) 0%, rgba(0, 255, 179, 0.4) 100%), url("../media/backgroundimage-small.jpeg") center center no-repeat;
-	background-size: cover;
-	font-family: 'Montserrat';
+// 	background: linear-gradient(to right, rgba(119, 186, 248, 0.4) 0%, rgba(0, 255, 179, 0.4) 100%), url("../media/backgroundimage-small.jpeg") center center no-repeat;
+// 	background-size: cover;
+// 	font-family: 'Montserrat';
 
-	color: $fontColor;
-}
+// 	color: $fontColor;
+// }
 
-h1 {
-	font-weight: bold;
-	font-size: $fontSize * 2;
-}
+// h1 {
+// 	font-weight: bold;
+// 	font-size: $fontSize * 2;
+// }
 
-.buttonskin {
-	opacity: 0;
-	padding: 5px;
-	transition: all .1s linear;
+// .buttonskin {
+// 	opacity: 0;
+// 	padding: 5px;
+// 	transition: all .1s linear;
 
-	&:hover {
-		text-shadow: 2px 2px 7px black;
-		cursor: pointer;
-	}
+// 	&:hover {
+// 		text-shadow: 2px 2px 7px black;
+// 		cursor: pointer;
+// 	}
 
-	&.clicked{
-		text-shadow: unset;
-	}
+// 	&.clicked{
+// 		text-shadow: unset;
+// 	}
 
-	&:focus {
-		outline:0;
-	}
+// 	&:focus {
+// 		outline:0;
+// 	}
 
-	&:after {
-		content: '';
-		display: block;
-		height: 2px;
-		width: 0px;
-		background: transparent;
-		transition: width .3s ease-in-out, background-color .3s ease-in-out;
-	}
-	&:hover:after {
-		width: 100%;
-		background: rgb(255, 255, 255);
-	}
-}
+// 	&:after {
+// 		content: '';
+// 		display: block;
+// 		height: 2px;
+// 		width: 0px;
+// 		background: transparent;
+// 		transition: width .3s ease-in-out, background-color .3s ease-in-out;
+// 	}
+// 	&:hover:after {
+// 		width: 100%;
+// 		background: rgb(255, 255, 255);
+// 	}
+// }
 
-.mainpage {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	margin: 20px;
-	min-width: 270px;
-}
+// .mainpage {
+// 	display: flex;
+// 	flex-direction: row;
+// 	flex-wrap: wrap;
+// 	margin: 20px;
+// 	min-width: 270px;
+// }
 
-.titles {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: flex-end;
-	font-size: $fontSize;
-	border-right: 2px solid white;
-	padding: 10px;
-}
+// .titles {
+// 	display: flex;
+// 	flex-direction: column;
+// 	justify-content: center;
+// 	align-items: flex-end;
+// 	font-size: $fontSize;
+// 	border-right: 2px solid white;
+// 	padding: 10px;
+// }
 
-.menu {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: flex-start;
-	font-size: $fontSize;
+// .menu {
+// 	display: flex;
+// 	flex-direction: column;
+// 	justify-content: center;
+// 	align-items: flex-start;
+// 	font-size: $fontSize;
 
-	padding: 10px;
+// 	padding: 10px;
 
-}
+// }
 
-@media (max-width: 740px) {
-	.mainpage {
-		flex-direction: column;
-	}
+// @media (max-width: 740px) {
+// 	.mainpage {
+// 		flex-direction: column;
+// 	}
 
-	.titles {
-		align-items: flex-start;
-		border-right: unset;
-		border-bottom: 2px solid white;
-	}
-}
-@media (max-width: 340px) {
-	.menu{
-		font-size: $fontSize * 0.85;
-	}
-}
+// 	.titles {
+// 		align-items: flex-start;
+// 		border-right: unset;
+// 		border-bottom: 2px solid white;
+// 	}
+// }
+// @media (max-width: 340px) {
+// 	.menu{
+// 		font-size: $fontSize * 0.85;
+// 	}
+// }
