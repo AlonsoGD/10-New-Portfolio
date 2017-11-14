@@ -157,7 +157,8 @@ p {
   .homebutton:focus {
     outline: 0; }
   .homebutton.clicked {
-    text-shadow: unset; }
+    text-shadow: unset;
+    color: white; }
 
 .mainpage {
   display: flex;
@@ -184,11 +185,13 @@ p {
   padding: 10px; }
 
 .aboutme {
+  opacity: 0;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   flex-wrap: wrap;
-  margin: 30px; }
+  margin: 30px;
+  transition: all 1s ease-in-out; }
 
 .descriptioncontainer {
   display: flex;
