@@ -104,6 +104,11 @@ $fontColor: white;
 	box-sizing: border-box;
 }
 
+html {
+	background: url("../media/backgroundimage-small-darken.png") center no-repeat;
+	//background: url("../media/backgroundimage-small.png") center no-repeat;
+}
+
 html, body {
 	height: 100%;
 	width: 100%;
@@ -118,8 +123,6 @@ body {
 	align-content: center;
 
 	//background: linear-gradient(to right, rgb(119, 188, 248) 0%, rgb(0, 255, 179) 100%);
-	background: url("../media/backgroundimage-small.png") center no-repeat;
-	background-size: cover;
 	font-family: 'Montserrat';
 
 	color: $fontColor;
@@ -128,6 +131,14 @@ body {
 h1 {
 	font-weight: bold;
 	font-size: $fontSize * 2;
+}
+
+p {
+	font-size: $fontSize * 0.85;
+}
+
+.center {
+	text-align: center;
 }
 
 .buttonskin {
@@ -162,6 +173,28 @@ h1 {
 	}
 }
 
+.homebutton {
+	margin: 10px;
+	padding: 5px 15px;
+	transition: all .1s linear;
+	font-size: $fontSize;
+	border: 2px solid white;
+
+	&:hover {
+		cursor: pointer;
+		color: rgb(158, 158, 158);
+		border: 2px solid rgb(179, 178, 178);
+		text-shadow: 2px 2px 7px black;
+	}
+	&:focus {
+		outline:0;
+	}
+	
+	&.clicked{
+		text-shadow: unset;
+	}
+}
+
 .mainpage {
 	display: flex;
 	flex-direction: row;
@@ -188,7 +221,33 @@ h1 {
 	font-size: $fontSize;
 
 	padding: 10px;
+}
 
+.aboutme {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	margin: 30px;
+}
+
+.descriptioncontainer {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	padding: 15px;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+
+.imageself {
+	border-radius: 50%;
+	align-self: center;
+	max-width: 100%;
+	height: auto;
+	margin: 20px;
+	
 }
 
 @media (max-width: 740px) {
@@ -201,9 +260,28 @@ h1 {
 		border-right: unset;
 		border-bottom: 2px solid white;
 	}
+
 }
-@media (max-width: 340px) {
+@media (max-width: 907px) {
+	body {
+		flex-direction: column;
+	}
+
+	.aboutme {
+		flex-direction: column;
+	}
+
+}
+
+@media (max-width: 380px) {
 	.menu{
 		font-size: $fontSize * 0.85;
 	}
+	p {
+		font-size: $fontSize * 0.65;
+	}
+	h1 {
+		font-size: $fontSize * 1.4;
+	}
 }
+

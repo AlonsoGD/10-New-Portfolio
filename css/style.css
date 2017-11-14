@@ -94,6 +94,9 @@ button::-moz-focus-inner {
 * {
   box-sizing: border-box; }
 
+html {
+  background: url("../media/backgroundimage-small-darken.png") center no-repeat; }
+
 html, body {
   height: 100%;
   width: 100%; }
@@ -105,14 +108,18 @@ body {
   justify-content: center;
   align-items: center;
   align-content: center;
-  background: url("../media/backgroundimage-small.png") center no-repeat;
-  background-size: cover;
   font-family: 'Montserrat';
   color: white; }
 
 h1 {
   font-weight: bold;
   font-size: 40pt; }
+
+p {
+  font-size: 17pt; }
+
+.center {
+  text-align: center; }
 
 .buttonskin {
   opacity: 0;
@@ -135,6 +142,22 @@ h1 {
   .buttonskin:hover:after {
     width: 100%;
     background: white; }
+
+.homebutton {
+  margin: 10px;
+  padding: 5px 15px;
+  transition: all .1s linear;
+  font-size: 20pt;
+  border: 2px solid white; }
+  .homebutton:hover {
+    cursor: pointer;
+    color: #9e9e9e;
+    border: 2px solid #b3b2b2;
+    text-shadow: 2px 2px 7px black; }
+  .homebutton:focus {
+    outline: 0; }
+  .homebutton.clicked {
+    text-shadow: unset; }
 
 .mainpage {
   display: flex;
@@ -160,6 +183,29 @@ h1 {
   font-size: 20pt;
   padding: 10px; }
 
+.aboutme {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 30px; }
+
+.descriptioncontainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 15px;
+  justify-content: center;
+  align-items: center;
+  align-content: center; }
+
+.imageself {
+  border-radius: 50%;
+  align-self: center;
+  max-width: 100%;
+  height: auto;
+  margin: 20px; }
+
 @media (max-width: 740px) {
   .mainpage {
     flex-direction: column; }
@@ -168,8 +214,20 @@ h1 {
     align-items: flex-start;
     border-right: unset;
     border-bottom: 2px solid white; } }
-@media (max-width: 340px) {
+@media (max-width: 907px) {
+  body {
+    flex-direction: column; }
+
+  .aboutme {
+    flex-direction: column; } }
+@media (max-width: 380px) {
   .menu {
-    font-size: 17pt; } }
+    font-size: 17pt; }
+
+  p {
+    font-size: 13pt; }
+
+  h1 {
+    font-size: 28pt; } }
 
 /*# sourceMappingURL=style.css.map */
