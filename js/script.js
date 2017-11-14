@@ -3,6 +3,8 @@ $(document).ready(function () {
     var $buttonsArray = [$('#aboutb'), $('#skillsb'), $('#portfoliob'), $('#didbeforeb'), $('#contactb')];
     var $screensArray = [$('#mainpage'), $('#aboutme'), $('#skills'), $('#porfolio'), $('#previousexp'), $('#contact')];
     var $titles =  $('.titles');
+    var $homeButton = $('#homeb-aboutme');
+    var $homeButtons = $('.homebutton');
 
     function introAnimation () {
         
@@ -22,8 +24,15 @@ $(document).ready(function () {
 
     function hideAllPages() {
         for (var i = 1; i < $screensArray.length; i++) {
-            $screensArray[i].hide();
+            $screensArray[i].hide()
+            $screensArray[i].css('opacity', '0');
         }
+    }
+
+    function goBack () {
+        hideAllPages();
+        $screensArray[0].show();
+        $screensArray[0].css('opacity', '1');
     }
        
     
@@ -47,7 +56,10 @@ $(document).ready(function () {
         $screensArray[0].css('opacity', '0');
         $screensArray[1].show();
         $screensArray[1].css('opacity', '1');
+        $homeButton.css('opacity', '1');
+        $homeButton.addClass('animated fadeInLeft');
     })
 
-    
+    $homeButtons.click(goBack);
+
 })
