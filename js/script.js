@@ -1,5 +1,6 @@
 $(document).ready(function () {
     var $buttons = $('button');
+    var $screens = $('.screen');
     var $buttonsArray = [$('#aboutb'), $('#skillsb'), $('#portfoliob'), $('#didbeforeb'), $('#contactb')];
     var $screensArray = [$('#mainpage'), $('#aboutme'), $('#skills'), $('#porfolio'), $('#previousexp'), $('#contact')];
     var $titles =  $('.titles');
@@ -23,26 +24,31 @@ $(document).ready(function () {
     }
 
     function hideAllPages() {
-        for (var i = 1; i < $screensArray.length; i++) {
-            $screensArray[i].hide()
-            $screensArray[i].css('opacity', '0');
-        }
+        hideElement($screens);
     }
 
     function goBack () {
         hideAllPages();
-        $screensArray[0].show();
-        $screensArray[0].css('opacity', '1');
+        showElement($screensArray[0])
+    }
+
+    function hideElement (element) {
+        element.hide();
+        element.css('opacity', '0');
+    }
+    
+    function showElement (element) {
+        element.show();
+        element.css('opacity', '1');
     }
        
-    
     // MAIN PAGE //
     hideAllPages();
+    showElement($('#mainpage'));
     $titles.addClass('animated fadeInUp');
     introAnimation();
-    
-    
-    //Click animations for the buttons;
+        
+    //Click listeners for the animations and page changes
     $buttons
         .mousedown(function() {
             $(this).addClass('clicked');
@@ -51,15 +57,44 @@ $(document).ready(function () {
             $(this).removeClass('clicked');
         })
     
+    //Clicking about me button
     $buttonsArray[0].click(function (){
-        $screensArray[0].hide();
-        $screensArray[0].css('opacity', '0');
-        $screensArray[1].show();
-        $screensArray[1].css('opacity', '1');
-        $homeButton.css('opacity', '1');
+        hideElement($screensArray[0]);
+        showElement($screensArray[1]);
+        showElement($homeButton);
         $homeButton.addClass('animated fadeInLeft');
     })
 
+    //Clicking skills button
+    $buttonsArray[1].click(function (){
+        hideElement($screensArray[0]);
+        showElement($screensArray[2]);
+        showElement($homeButton);
+        $homeButton.addClass('animated fadeInLeft');
+    })
+    //Clicking porfolio button
+    $buttonsArray[2].click(function (){
+        hideElement($screensArray[0]);
+        showElement($screensArray[3]);
+        showElement($homeButton);
+        $homeButton.addClass('animated fadeInLeft');
+    })
+    //Clicking previous experience button
+    $buttonsArray[3].click(function (){
+        hideElement($screensArray[0]);
+        showElement($screensArray[4]);
+        showElement($homeButton);
+        $homeButton.addClass('animated fadeInLeft');
+    })
+    //Clicking contact button
+    $buttonsArray[4].click(function (){
+        hideElement($screensArray[0]);
+        showElement($screensArray[5]);
+        showElement($homeButton);
+        $homeButton.addClass('animated fadeInLeft');
+    })
+
+    //Clicking any of the BACK buttons;
     $homeButtons.click(goBack);
 
 })
