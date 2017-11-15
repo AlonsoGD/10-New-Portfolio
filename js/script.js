@@ -1,7 +1,14 @@
 $(document).ready(function () {
-    var $buttons = $('button');
+    var $allButtons = $('button');
     var $allScreens = $('.screen');
-    var $buttonsArray = [$('#aboutb'), $('#skillsb'), $('#portfoliob'), $('#didbeforeb'), $('#contactb')];
+    var $allHomeButtons = $('.homebutton');
+    var $buttonsObj = {
+        aboutmeb : $('#aboutb'),
+        skillsb : $('#skillsb'), 
+        portfoliob : $('#portfoliob'), 
+        previousexpb : $('#didbeforeb'), 
+        contactb : $('#contactb')
+    };
     var $screensObj = {
         mainpage : $('#mainpage'),
         aboutme : $('#aboutme'), 
@@ -11,8 +18,6 @@ $(document).ready(function () {
         contact : $('#contact'),
     };
     var $titles =  $('.titles');
-    var $homeButton = $('#homeb-aboutme');
-    var $homeButtons = $('.homebutton');
 
     function introAnimation () {
         
@@ -28,11 +33,12 @@ $(document).ready(function () {
         $titles.addClass('animated fadeInUp');
         
         var delay = 500;  
-        for (var i = 0; i < $buttonsArray.length; i++) {
-            animationWithTimeout($buttonsArray[i], delay);
-            delay += 100;
-        };
-        
+        for (var key in $buttonsObj) {
+            if ($buttonsObj.hasOwnProperty(key)) {
+                animationWithTimeout($buttonsObj[key], delay);
+                delay += 100;
+            }
+        }
     }
 
     function hideAllPages() {
@@ -59,7 +65,7 @@ $(document).ready(function () {
     introAnimation();
         
     //Click listeners for the animations and page changes
-    $buttons
+    $allButtons
         .mousedown(function() {
             $(this).addClass('clicked');
         })
@@ -68,43 +74,31 @@ $(document).ready(function () {
         })
     
     //Clicking about me button
-    $buttonsArray[0].click(function (){
+    $buttonsObj.aboutmeb.click(function (){
         hideElement($screensObj.mainpage);
         showElement($screensObj.aboutme);
-        showElement($homeButton);
-        $homeButton.addClass('animated fadeInLeft');
     })
 
     //Clicking skills button
-    $buttonsArray[1].click(function (){
+    $buttonsObj.skillsb.click(function (){
         hideElement($screensObj.mainpage);
         showElement($screensObj.skills);
-        showElement($homeButton);
-        $homeButton.addClass('animated fadeInLeft');
     })
     //Clicking porfolio button
-    $buttonsArray[2].click(function (){
+    $buttonsObj.portfoliob.click(function (){
         hideElement($screensObj.mainpage);
         showElement($screensObj.portfolio);
-        showElement($homeButton);
-        $homeButton.addClass('animated fadeInLeft');
     })
     //Clicking previous experience button
-    $buttonsArray[3].click(function (){
+    $buttonsObj.previousexpb.click(function (){
         hideElement($screensObj.mainpage);
         showElement($screensObj.previusexp);
-        showElement($homeButton);
-        $homeButton.addClass('animated fadeInLeft');
     })
     //Clicking contact button
-    $buttonsArray[4].click(function (){
+    $buttonsObj.contactb.click(function (){
         hideElement($screensObj.mainpage);
         showElement($screensObj.contact);
-        showElement($homeButton);
-        $homeButton.addClass('animated fadeInLeft');
     })
-
-    //Clicking any of the BACK buttons;
-    $homeButtons.click(introAnimation);
-
+    //Clicking any of the BACK Buttons;
+    $allHomeButtons.click(introAnimation);
 })
