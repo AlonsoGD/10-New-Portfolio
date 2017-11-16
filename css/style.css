@@ -244,7 +244,7 @@ p {
   body {
     flex-direction: column; }
 
-  .aboutme {
+  .standardlayout {
     flex-direction: column; } }
 @media (max-width: 380px) {
   .menu {
