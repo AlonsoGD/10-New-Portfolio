@@ -130,25 +130,25 @@ p {
 .center {
   text-align: center; }
 
-.buttonskin {
+.mainbuttonskin {
   opacity: 0;
   padding: 5px;
   transition: all .1s linear; }
-  .buttonskin:hover {
+  .mainbuttonskin:hover {
     text-shadow: 2px 2px 7px black;
     cursor: pointer; }
-  .buttonskin.clicked {
+  .mainbuttonskin.clicked {
     text-shadow: unset; }
-  .buttonskin:focus {
+  .mainbuttonskin:focus {
     outline: 0; }
-  .buttonskin:after {
+  .mainbuttonskin:after {
     content: '';
     display: block;
     height: 2px;
     width: 0px;
     background: transparent;
     transition: width .3s ease-in-out, background-color .3s ease-in-out; }
-  .buttonskin:hover:after {
+  .mainbuttonskin:hover:after {
     width: 100%;
     background: white; }
 
@@ -175,7 +175,8 @@ p {
   flex-direction: row;
   flex-wrap: wrap;
   margin: 20px;
-  min-width: 270px; }
+  min-width: 270px;
+  transition: all .5s ease-in-out; }
 
 .titles {
   display: flex;

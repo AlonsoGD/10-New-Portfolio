@@ -1,7 +1,7 @@
 $(document).ready(function () {
-    var $allButtons = $('button');
+    var $allMainButtons = $('.mainbuttonskin');
+    var $allBackButtons = $('.homebutton');
     var $allScreens = $('.screen');
-    var $allHomeButtons = $('.homebutton');
     var $pagelayout = $('.pagelayout');
     var $buttonsObj = {
         aboutmeb : $('#aboutb'),
@@ -45,12 +45,7 @@ $(document).ready(function () {
     function hideAllPages() {
         hideElement($allScreens);
     }
-
-    function goBack () {
-        hideAllPages();
-        showElement($screensObj.mainpage)
-    }
-
+    
     function hideElement (element) {
         element.hide();
         element.css('opacity', '0');
@@ -60,18 +55,29 @@ $(document).ready(function () {
         element.show();
         element.css('opacity', '1');
     }
-
+    
     function toggleBackground () {
         $pagelayout.toggleClass('darken');
     }
-       
+    
+    function hideMainPage () {
+        hideElement($screensObj.mainpage);
+        toggleBackground();
+    }
+    
+    function goBack () {
+        hideAllPages();
+        showElement($screensObj.mainpage);
+        toggleBackground();
+    }
+
     // MAIN PAGE //
 
     introAnimation();
         
     //Click listeners for the animations and page changes
     //Animations when main menu buttons clicked
-    $allButtons
+    $allMainButtons
         .mousedown(function() {
             $(this).addClass('clicked');
         })
@@ -81,38 +87,34 @@ $(document).ready(function () {
     
     //Clicking about me button
     $buttonsObj.aboutmeb.click(function (){
-        hideElement($screensObj.mainpage);
+        hideMainPage();
         showElement($screensObj.aboutme);
-        toggleBackground();
     })
 
     //Clicking skills button
     $buttonsObj.skillsb.click(function (){
-        hideElement($screensObj.mainpage);
+        hideMainPage();
         showElement($screensObj.skills);
-        toggleBackground();
     })
     //Clicking porfolio button
     $buttonsObj.portfoliob.click(function (){
-        hideElement($screensObj.mainpage);
+        hideMainPage();
         showElement($screensObj.portfolio);
-        toggleBackground();
     })
     //Clicking previous experience button
     $buttonsObj.previousexpb.click(function (){
-        hideElement($screensObj.mainpage);
+        hideMainPage();
         showElement($screensObj.previusexp);
-        toggleBackground();
     })
     //Clicking contact button
     $buttonsObj.contactb.click(function (){
-        hideElement($screensObj.mainpage);
+        hideMainPage();
         showElement($screensObj.contact);
-        toggleBackground();
     })
     //Clicking any of the BACK Buttons;
-    $allHomeButtons.click(function () {
-        introAnimation();
-        toggleBackground();
+    $allBackButtons.click(function () {
+        $titles.removeClass('animated fadeInRight');
+        $allMainButtons.removeClass('animated fadeInRight');
+        goBack();
     });
 })

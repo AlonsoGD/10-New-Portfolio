@@ -157,7 +157,7 @@ p {
 	text-align: center;
 }
 
-.buttonskin {
+.mainbuttonskin {
 	opacity: 0;
 	padding: 5px;
 	transition: all .1s linear;
@@ -219,6 +219,8 @@ p {
 	flex-wrap: wrap;
 	margin: 20px;
 	min-width: 270px;
+	
+	transition: all .5s ease-in-out;
 }
 
 .titles {
