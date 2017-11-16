@@ -94,6 +94,10 @@ button::-moz-focus-inner {
 * {
   box-sizing: border-box; }
 
+html, body {
+  height: 100%;
+  width: 100%; }
+
 html {
   background: url("../media/backgroundimage-small-darken.png") no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -104,11 +108,8 @@ html {
   html.darken {
     background: url("../media/backgroundimage-small-darken.png") no-repeat center center fixed; }
 
-html, body {
+.pagelayout {
   height: 100%;
-  width: 100%; }
-
-body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -245,7 +246,7 @@ p {
     border-right: unset;
     border-bottom: 2px solid white; } }
 @media (max-width: 907px) {
-  body {
+  .pagelayout {
     flex-direction: column; }
 
   .standardlayout {

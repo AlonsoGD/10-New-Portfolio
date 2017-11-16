@@ -104,6 +104,12 @@ $fontColor: white;
 	box-sizing: border-box;
 }
 
+
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
 html {
 	background: url("../media/backgroundimage-small-darken.png") no-repeat center center fixed; 
 	-webkit-background-size: cover;
@@ -116,13 +122,8 @@ html {
 		background: url("../media/backgroundimage-small-darken.png") no-repeat center center fixed; 
 	}
 }
-
-html, body {
+.pagelayout {
 	height: 100%;
-	width: 100%;
-}
-
-body {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -303,7 +304,7 @@ p {
 
 }
 @media (max-width: 907px) {
-	body {
+	.pagelayout {
 		flex-direction: column;
 	}
 
