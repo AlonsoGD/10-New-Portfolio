@@ -259,27 +259,31 @@ p {
 	
 }
 
-// .skills {
-// 	opacity: 1;
-// 	display: flex;
-// 	flex-direction: row;
-// 	align-items: flex-start;
-// 	flex-wrap: wrap;
-// 	margin: 30px;
-
-// 	transition: all 1s ease-in-out;
-// }
-
 .skillsgrid {
 	@extend .descriptioncontainer;
 	max-width: 600px;
 	padding: unset;
+	margin: 15px;
+}
+
+.skilltag {
+	margin: 5px;
 }
 
 .skillcontainer {
 	width: 125px;
 	height: 125px;
-	padding: 15px;
+	margin: 10px;
+
+	color: transparent;
+	border: 0px solid transparent;
+
+	transition: all .1s ease-in-out;
+
+	&:hover {
+		color: white;
+		border: 20px solid transparent;
+	}
 }
 
 @media (max-width: 740px) {
