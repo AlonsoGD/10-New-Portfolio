@@ -95,10 +95,14 @@ button::-moz-focus-inner {
   box-sizing: border-box; }
 
 html {
-  background: url("../media/backgroundimage-small-darken.png") center no-repeat;
+  background: url("../media/backgroundimage-small-darken.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   transition: background 0.3s ease-in-out; }
   html.darken {
-    background: url("../media/backgroundimage-small-darken.png") center no-repeat; }
+    background: url("../media/backgroundimage-small-darken.png") no-repeat center center fixed; }
 
 html, body {
   height: 100%;
@@ -242,7 +246,6 @@ p {
     border-bottom: 2px solid white; } }
 @media (max-width: 907px) {
   body {
-    height: 100%;
     flex-direction: column; }
 
   .standardlayout {

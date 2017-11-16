@@ -105,11 +105,15 @@ $fontColor: white;
 }
 
 html {
-	background: url("../media/backgroundimage-small-darken.png") center no-repeat;
-	//background: url("../media/backgroundimage-small.png") center center no-repeat, linear-gradient(to right, rgba(119, 186, 248, 0.4) 0%, rgba(0, 255, 179, 0.4) 100%);
+	background: url("../media/backgroundimage-small-darken.png") no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
 	transition: background 0.3s ease-in-out;
 	&.darken {
-		background: url("../media/backgroundimage-small-darken.png") center no-repeat;
+		background: url("../media/backgroundimage-small-darken.png") no-repeat center center fixed; 
 	}
 }
 
@@ -300,7 +304,6 @@ p {
 }
 @media (max-width: 907px) {
 	body {
-		height: 100%;
 		flex-direction: column;
 	}
 
