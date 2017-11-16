@@ -2,7 +2,7 @@ $(document).ready(function () {
     var $allButtons = $('button');
     var $allScreens = $('.screen');
     var $allHomeButtons = $('.homebutton');
-    var $html = $('html');
+    var $pagelayout = $('.pagelayout');
     var $buttonsObj = {
         aboutmeb : $('#aboutb'),
         skillsb : $('#skillsb'), 
@@ -62,7 +62,7 @@ $(document).ready(function () {
     }
 
     function toggleBackground () {
-        $html.toggleClass('darken');
+        $pagelayout.toggleClass('darken');
     }
        
     // MAIN PAGE //

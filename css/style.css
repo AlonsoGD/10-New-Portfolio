@@ -103,11 +103,7 @@ html {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
-  transition: background 0.3s ease-in-out; }
-  html.darken {
-    background: url("../media/backgroundimage-small-darken.png") no-repeat center center fixed;
-    background-size: cover; }
+  background-size: cover; }
 
 .pagelayout {
   height: 100%;
@@ -118,7 +114,11 @@ html {
   align-items: center;
   align-content: center;
   font-family: 'Montserrat';
-  color: white; }
+  color: white;
+  transition: background .5s ease-in-out; }
+  .pagelayout.darken {
+    background: rgba(0, 0, 0, 0.808);
+    background-size: cover; }
 
 h1 {
   font-weight: bold;

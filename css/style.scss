@@ -117,11 +117,11 @@ html {
 	-o-background-size: cover;
 	background-size: cover;
 
-	transition: background 0.3s ease-in-out;
-	&.darken {
-		background: url("../media/backgroundimage-small-darken.png") no-repeat center center fixed; 
-		background-size: cover;
-	}
+
+	// &.darken {
+	// 	background: url("../media/backgroundimage-small-darken.png") no-repeat center center fixed; 
+	// 	background-size: cover;
+	// }
 }
 .pagelayout {
 	height: 100%;
@@ -132,10 +132,16 @@ html {
 	align-items: center;
 	align-content: center;
 
-	//background: linear-gradient(to right, rgb(119, 188, 248) 0%, rgb(0, 255, 179) 100%);
 	font-family: 'Montserrat';
 
 	color: $fontColor;
+
+	transition: background .5s ease-in-out;
+
+	&.darken {
+		background: rgba(0, 0, 0, 0.808);
+		background-size: cover;
+	}
 }
 
 h1 {
