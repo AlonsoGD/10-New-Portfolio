@@ -105,8 +105,12 @@ $fontColor: white;
 }
 
 html {
-	background: url("../media/backgroundimage-small.png") center no-repeat;
+	background: url("../media/backgroundimage-small-darken.png") center no-repeat;
 	//background: url("../media/backgroundimage-small.png") center center no-repeat, linear-gradient(to right, rgba(119, 186, 248, 0.4) 0%, rgba(0, 255, 179, 0.4) 100%);
+	transition: background 0.3s ease-in-out;
+	&.darken {
+		background: url("../media/backgroundimage-small-darken.png") center no-repeat;
+	}
 }
 
 html, body {
@@ -151,7 +155,7 @@ p {
 		cursor: pointer;
 	}
 
-	&.clicked{
+	&.clicked {
 		text-shadow: unset;
 	}
 
@@ -225,7 +229,7 @@ p {
 	padding: 10px;
 }
 
-.aboutme {
+.standardlayout {
 	opacity: 0;
 	display: flex;
 	flex-direction: row;
@@ -253,6 +257,29 @@ p {
 	height: auto;
 	margin: 20px;
 	
+}
+
+// .skills {
+// 	opacity: 1;
+// 	display: flex;
+// 	flex-direction: row;
+// 	align-items: flex-start;
+// 	flex-wrap: wrap;
+// 	margin: 30px;
+
+// 	transition: all 1s ease-in-out;
+// }
+
+.skillsgrid {
+	@extend .descriptioncontainer;
+	max-width: 600px;
+	padding: unset;
+}
+
+.skillcontainer {
+	width: 125px;
+	height: 125px;
+	padding: 15px;
 }
 
 @media (max-width: 740px) {
