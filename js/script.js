@@ -2,6 +2,7 @@ $(document).ready(function () {
     var $allButtons = $('button');
     var $allScreens = $('.screen');
     var $allHomeButtons = $('.homebutton');
+    var $html = $('html');
     var $buttonsObj = {
         aboutmeb : $('#aboutb'),
         skillsb : $('#skillsb'), 
@@ -15,7 +16,7 @@ $(document).ready(function () {
         skills : $('#skills'), 
         portfolio : $('#porfolio'), 
         previusexp : $('#previousexp'), 
-        contact : $('#contact'),
+        contact : $('#contact')
     };
     var $titles =  $('.titles');
 
@@ -59,12 +60,17 @@ $(document).ready(function () {
         element.show();
         element.css('opacity', '1');
     }
+
+    function toggleBackground () {
+        $html.toggleClass('darken');
+    }
        
     // MAIN PAGE //
 
     introAnimation();
         
     //Click listeners for the animations and page changes
+    //Animations when main menu buttons clicked
     $allButtons
         .mousedown(function() {
             $(this).addClass('clicked');
@@ -77,28 +83,36 @@ $(document).ready(function () {
     $buttonsObj.aboutmeb.click(function (){
         hideElement($screensObj.mainpage);
         showElement($screensObj.aboutme);
+        toggleBackground();
     })
 
     //Clicking skills button
     $buttonsObj.skillsb.click(function (){
         hideElement($screensObj.mainpage);
         showElement($screensObj.skills);
+        toggleBackground();
     })
     //Clicking porfolio button
     $buttonsObj.portfoliob.click(function (){
         hideElement($screensObj.mainpage);
         showElement($screensObj.portfolio);
+        toggleBackground();
     })
     //Clicking previous experience button
     $buttonsObj.previousexpb.click(function (){
         hideElement($screensObj.mainpage);
         showElement($screensObj.previusexp);
+        toggleBackground();
     })
     //Clicking contact button
     $buttonsObj.contactb.click(function (){
         hideElement($screensObj.mainpage);
         showElement($screensObj.contact);
+        toggleBackground();
     })
     //Clicking any of the BACK Buttons;
-    $allHomeButtons.click(introAnimation);
+    $allHomeButtons.click(function () {
+        introAnimation();
+        toggleBackground();
+    });
 })
