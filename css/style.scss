@@ -312,7 +312,7 @@ p {
 }
 @media (max-width: 907px) {
 	.pagelayout {
-		flex-direction: column;
+		height: unset;
 	}
 
 	.standardlayout {

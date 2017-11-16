@@ -248,7 +248,7 @@ p {
     border-bottom: 2px solid white; } }
 @media (max-width: 907px) {
   .pagelayout {
-    flex-direction: column; }
+    height: unset; }
 
   .standardlayout {
     flex-direction: column; } }
