@@ -110,6 +110,10 @@ html, body {
 	width: 100%;
 }
 
+body.removeheight {
+	height: unset;
+}
+
 html {
 	background: url("../media/backgroundimage-small.png") no-repeat center center fixed; 
 	-webkit-background-size: cover;
@@ -126,7 +130,9 @@ html {
 .pagelayout {
 	height: 100%;
 	display: flex;
-	flex-direction: row;
+
+	flex-direction: column;
+
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
@@ -140,17 +146,21 @@ html {
 
 	&.darken {
 		background: rgba(0, 0, 0, 0.808);
-		background-size: cover;
+		background-size: cover !important;
 	}
 }
 
 h1 {
 	font-weight: bold;
 	font-size: $fontSize * 2;
+
+	transition: font-size .5s ease-in-out;
 }
 
 p {
 	font-size: $fontSize * 0.85;
+
+	transition: font-size .5s ease-in-out;
 }
 
 .center {
@@ -241,6 +251,8 @@ p {
 	font-size: $fontSize;
 
 	padding: 10px;
+
+	transition: font-size .5s ease-in-out;
 }
 
 .standardlayout {
@@ -300,6 +312,23 @@ p {
 	}
 }
 
+.portfoliogrid {
+	@extend .descriptioncontainer;
+	padding: 15px;
+	max-width: 100%;
+}
+
+.projectcontainer {
+	
+	& img {
+		height: auto;
+		max-width: 400px;
+
+		transition: all .5s ease-in-out;
+	}
+}
+
+
 @media (max-width: 740px) {
 	.mainpage {
 		flex-direction: column;
@@ -333,5 +362,14 @@ p {
 	h1 {
 		font-size: $fontSize * 1.4;
 	}
+}
+
+@media (max-width: 450px) {
+	.projectcontainer {
+		& img {
+			max-width: 250px;
+		}
+	}
+
 }
 

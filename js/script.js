@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    var $allButtons = $('button');
     var $allMainButtons = $('.mainbuttonskin');
     var $allBackButtons = $('.homebutton');
     var $allScreens = $('.screen');
@@ -66,6 +67,7 @@ $(document).ready(function () {
     }
     
     function goBack () {
+        $('body').removeClass('removeheight');
         hideAllPages();
         showElement($screensObj.mainpage);
         toggleBackground();
@@ -77,7 +79,7 @@ $(document).ready(function () {
         
     //Click listeners for the animations and page changes
     //Animations when main menu buttons clicked
-    $allMainButtons
+    $allButtons
         .mousedown(function() {
             $(this).addClass('clicked');
         })
@@ -100,6 +102,7 @@ $(document).ready(function () {
     $buttonsObj.portfoliob.click(function (){
         hideMainPage();
         showElement($screensObj.portfolio);
+        $('body').addClass('removeheight');
     })
     //Clicking previous experience button
     $buttonsObj.previousexpb.click(function (){
