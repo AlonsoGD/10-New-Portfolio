@@ -106,8 +106,11 @@ $fontColor: white;
 
 
 html, body {
-	height: 100%;
 	width: 100%;
+	height: 100%;
+}
+
+body {
 }
 
 body.removeheight {
@@ -145,7 +148,7 @@ html {
 	transition: background .5s ease-in-out;
 
 	&.darken {
-		background: rgba(0, 0, 0, 0.808);
+		background: rgba(0, 0, 0, 0.80);
 		background-size: cover !important;
 	}
 }
@@ -256,7 +259,7 @@ p {
 }
 
 .standardlayout {
-	opacity: 0;
+	opacity: 1;
 	display: flex;
 	flex-direction: row;
 	align-items: flex-start;
@@ -320,15 +323,65 @@ p {
 
 .projectcontainer {
 	
-	& img {
+	position: relative;
+
+	
+
+	.imgcontainer {
+		background: rgb(0, 0, 0);
+	}
+	
+	img {
+		opacity: 0.4;
+		display: block;
 		height: auto;
 		max-width: 400px;
-
 		transition: all .5s ease-in-out;
 	}
+		
+	.project-title-container {
+		position: absolute;
+		text-align: center;    
+		width: 100%;
+		top: 25%;
+		padding: 0 35px;
+		transition: opacity .3s ease-in-out;
+		
+		& h4 {
+			font-size: $fontSize * 1.2;
+		}
+	}
+
+	.linkscontainer {
+		position: absolute;
+		width: 100%;
+		text-align: center;
+		top: 45%;
+
+		display: flex;
+		flex-direction: row;
+
+		.livelinkcontainer, .gitlinkcontainer {
+			width: 50%;
+		}
+	}
+	
+	&:hover .project-title-container {
+		opacity: 0;
+	}
+
 }
 
+@media (max-width: 907px) {
+	.pagelayout {
+		height: unset;
+	}
 
+	.standardlayout {
+		flex-direction: column;
+	}
+
+}
 @media (max-width: 740px) {
 	.mainpage {
 		flex-direction: column;
@@ -341,15 +394,17 @@ p {
 	}
 
 }
-@media (max-width: 907px) {
-	.pagelayout {
-		height: unset;
+
+@media (max-width: 450px) {
+	.projectcontainer {
+		& img {
+			max-width: 250px;
+		}
 	}
 
-	.standardlayout {
-		flex-direction: column;
-	}
-
+	.projectcontainer .project-title-container h4 {
+		font-size: $fontSize * 0.9; 
+	} 
 }
 
 @media (max-width: 380px) {
@@ -364,12 +419,4 @@ p {
 	}
 }
 
-@media (max-width: 450px) {
-	.projectcontainer {
-		& img {
-			max-width: 250px;
-		}
-	}
-
-}
 

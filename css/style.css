@@ -95,8 +95,8 @@ button::-moz-focus-inner {
   box-sizing: border-box; }
 
 html, body {
-  height: 100%;
-  width: 100%; }
+  width: 100%;
+  height: 100%; }
 
 body.removeheight {
   height: unset; }
@@ -120,7 +120,7 @@ html {
   color: white;
   transition: background .5s ease-in-out; }
   .pagelayout.darken {
-    background: rgba(0, 0, 0, 0.808);
+    background: rgba(0, 0, 0, 0.8);
     background-size: cover !important; }
 
 h1 {
@@ -202,7 +202,7 @@ p {
   transition: font-size .5s ease-in-out; }
 
 .standardlayout {
-  opacity: 0;
+  opacity: 1;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -249,11 +249,43 @@ p {
   padding: 15px;
   max-width: 100%; }
 
-.projectcontainer img {
-  height: auto;
-  max-width: 400px;
-  transition: all .5s ease-in-out; }
+.projectcontainer {
+  position: relative; }
+  .projectcontainer .imgcontainer {
+    background: black; }
+  .projectcontainer img {
+    opacity: 0.4;
+    display: block;
+    height: auto;
+    max-width: 400px;
+    transition: all .5s ease-in-out; }
+  .projectcontainer .project-title-container {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 25%;
+    padding: 0 35px;
+    transition: opacity .3s ease-in-out; }
+    .projectcontainer .project-title-container h4 {
+      font-size: 24pt; }
+  .projectcontainer .linkscontainer {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 45%;
+    display: flex;
+    flex-direction: row; }
+    .projectcontainer .linkscontainer .livelinkcontainer, .projectcontainer .linkscontainer .gitlinkcontainer {
+      width: 50%; }
+  .projectcontainer:hover .project-title-container {
+    opacity: 0; }
 
+@media (max-width: 907px) {
+  .pagelayout {
+    height: unset; }
+
+  .standardlayout {
+    flex-direction: column; } }
 @media (max-width: 740px) {
   .mainpage {
     flex-direction: column; }
@@ -262,12 +294,12 @@ p {
     align-items: flex-start;
     border-right: unset;
     border-bottom: 2px solid white; } }
-@media (max-width: 907px) {
-  .pagelayout {
-    height: unset; }
+@media (max-width: 450px) {
+  .projectcontainer img {
+    max-width: 250px; }
 
-  .standardlayout {
-    flex-direction: column; } }
+  .projectcontainer .project-title-container h4 {
+    font-size: 18pt; } }
 @media (max-width: 380px) {
   .menu {
     font-size: 17pt; }
@@ -277,8 +309,5 @@ p {
 
   h1 {
     font-size: 28pt; } }
-@media (max-width: 450px) {
-  .projectcontainer img {
-    max-width: 250px; } }
 
 /*# sourceMappingURL=style.css.map */
