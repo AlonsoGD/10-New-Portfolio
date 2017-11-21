@@ -409,8 +409,8 @@ p {
 		transition: all .3s ease-in-out;
 
 		a {
-			visibility: hidden;
-			transition: all .3s ease-in-out;
+			display: none;
+			opacity: 0;
 		}
 
 		.livelinkcontainer, .gitlinkcontainer {
@@ -436,7 +436,8 @@ p {
 			opacity: 1;
 
 			a {
-				visibility: visible;
+				display: inline-block;
+				opacity: 1;
 			}
 
 		}
