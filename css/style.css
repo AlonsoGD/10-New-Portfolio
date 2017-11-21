@@ -275,7 +275,7 @@ p {
   .projectcontainer .imgcontainer {
     background: black;
     display: block;
-    border: 3px solid #424242; }
+    border: 2px solid #fffefe; }
   .projectcontainer img {
     width: 100%;
     height: 100%;
@@ -298,7 +298,6 @@ p {
     .projectcontainer .techcontainer h4 {
       font-size: 34pt; }
   .projectcontainer .icon {
-    color: white;
     width: 50px;
     height: auto; }
   .projectcontainer .linkscontainer {
@@ -316,25 +315,19 @@ p {
       border-right: 1px solid white; }
     .projectcontainer .linkscontainer .gitlinkcontainer {
       border-left: 1px solid white; }
-  .projectcontainer:hover .linkscontainer {
-    opacity: 1; }
-  .projectcontainer:hover .project-title-container, .projectcontainer:hover .techcontainer {
-    opacity: 0; }
-  .projectcontainer:hover .techcontainer {
-    opacity: 1; }
-  .projectcontainer:hover img {
-    opacity: 0.2; }
   .projectcontainer:hover {
-    box-shadow: 2px 2px 15px 5px rgba(0, 0, 0, 0.75);
+    box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.75);
     transform: scale(1.1);
     z-index: 1; }
+    .projectcontainer:hover .linkscontainer {
+      opacity: 1; }
+    .projectcontainer:hover .project-title-container, .projectcontainer:hover .techcontainer {
+      opacity: 0; }
+    .projectcontainer:hover .techcontainer {
+      opacity: 1; }
+    .projectcontainer:hover img {
+      opacity: 0.2; }
 
-@media (max-width: 907px) {
-  .pagelayout {
-    height: unset; }
-
-  .standardlayout {
-    flex-direction: column; } }
 @media (max-width: 740px) {
   .mainpage {
     flex-direction: column; }
@@ -351,11 +344,8 @@ p {
   .projectcontainer .linkscontainer {
     top: 15%;
     padding: 0;
-    opacity: 1;
     font-size: 10pt; }
   .projectcontainer .project-title-container, .projectcontainer .techcontainer {
-    opacity: 1;
-    position: relative;
     max-width: 250px;
     padding: 0; }
     .projectcontainer .project-title-container h4, .projectcontainer .techcontainer h4 {

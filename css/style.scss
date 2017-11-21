@@ -356,7 +356,7 @@ p {
 	.imgcontainer {
 		background: rgb(0, 0, 0);
 		display: block;
-		border: 3px solid rgb(66, 66, 66);
+		border: 2px solid rgb(255, 254, 254);
 	}
 	
 	img {
@@ -392,7 +392,6 @@ p {
 	}
 
 	.icon {
-		color: white;
 		width: 50px;
 		height: auto;
 	}
@@ -423,25 +422,27 @@ p {
 
 	}
 	
-	&:hover .linkscontainer {
-		opacity: 1;
-	}
-
-	&:hover .project-title-container {
-		opacity: 0;
-	}
-
-	&:hover .techcontainer {
-		opacity: 1;
-	}
-
-	&:hover img {
-		opacity: 0.2;
-	}
 	&:hover {
-		box-shadow: 2px 2px 15px 5px rgba(0, 0, 0, 0.75);
+		box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.75);
 		transform: scale(1.1);
 		z-index: 1;
+
+		.linkscontainer {
+			opacity: 1;
+		}
+
+		.project-title-container {
+			opacity: 0;
+		}
+
+		.techcontainer {
+			opacity: 1;
+		}
+	
+		img {
+			opacity: 0.2;
+		}
+
 	}
 
 
@@ -449,11 +450,11 @@ p {
 
 @media (max-width: 907px) {
 	.pagelayout {
-		height: unset;
+		//height: unset;
 	}
 
 	.standardlayout {
-		flex-direction: column;
+		//flex-direction: column;
 	}
 
 }
@@ -483,13 +484,13 @@ p {
 		.linkscontainer {
 			top: 15%;
 			padding: 0;
-			opacity: 1;
+			//opacity: 1;
 			font-size: $fontSize * 0.5;
 		}
 
 		.project-title-container {
-			opacity: 1;
-			position: relative;
+			//opacity: 1;
+			//position: relative;
 			max-width: 250px;
 			padding: 0;
 
