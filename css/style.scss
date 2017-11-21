@@ -411,6 +411,12 @@ p {
 
 		.livelinkcontainer, .gitlinkcontainer {
 			width: 50%;
+
+			a {
+				pointer-events: none;
+				cursor: default;
+				transition: all .3s ease-in-out;
+			}
 		}
 
 		.livelinkcontainer {
@@ -431,6 +437,14 @@ p {
 		.linkscontainer {
 			opacity: 1;
 			display: flex;
+
+			.livelinkcontainer, .gitlinkcontainer {
+
+				a {
+					pointer-events: visible;
+					cursor: pointer;
+				}
+			}
 
 		}
 
