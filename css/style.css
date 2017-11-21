@@ -308,10 +308,8 @@ p {
     opacity: 0;
     display: flex;
     flex-direction: row;
+    display: none;
     transition: all .3s ease-in-out; }
-    .projectcontainer .linkscontainer a {
-      display: none;
-      opacity: 0; }
     .projectcontainer .linkscontainer .livelinkcontainer, .projectcontainer .linkscontainer .gitlinkcontainer {
       width: 50%; }
     .projectcontainer .linkscontainer .livelinkcontainer {
@@ -323,10 +321,8 @@ p {
     transform: scale(1.1);
     z-index: 1; }
     .projectcontainer:hover .linkscontainer {
-      opacity: 1; }
-      .projectcontainer:hover .linkscontainer a {
-        display: inline-block;
-        opacity: 1; }
+      opacity: 1;
+      display: flex; }
     .projectcontainer:hover .project-title-container, .projectcontainer:hover .techcontainer {
       opacity: 0; }
     .projectcontainer:hover .techcontainer {
