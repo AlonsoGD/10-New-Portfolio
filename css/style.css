@@ -310,8 +310,8 @@ p {
     flex-direction: row;
     transition: all .3s ease-in-out; }
     .projectcontainer .linkscontainer a {
-      pointer-events: none;
-      cursor: default; }
+      visibility: hidden;
+      transition: all .3s ease-in-out; }
     .projectcontainer .linkscontainer .livelinkcontainer, .projectcontainer .linkscontainer .gitlinkcontainer {
       width: 50%; }
     .projectcontainer .linkscontainer .livelinkcontainer {
@@ -325,8 +325,7 @@ p {
     .projectcontainer:hover .linkscontainer {
       opacity: 1; }
       .projectcontainer:hover .linkscontainer a {
-        pointer-events: visible;
-        cursor: pointer; }
+        visibility: visible; }
     .projectcontainer:hover .project-title-container, .projectcontainer:hover .techcontainer {
       opacity: 0; }
     .projectcontainer:hover .techcontainer {

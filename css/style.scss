@@ -409,8 +409,8 @@ p {
 		transition: all .3s ease-in-out;
 
 		a {
-			pointer-events: none;
-			cursor: default;
+			visibility: hidden;
+			transition: all .3s ease-in-out;
 		}
 
 		.livelinkcontainer, .gitlinkcontainer {
@@ -436,8 +436,7 @@ p {
 			opacity: 1;
 
 			a {
-				pointer-events: visible;
-				cursor: pointer;
+				visibility: visible;
 			}
 
 		}
