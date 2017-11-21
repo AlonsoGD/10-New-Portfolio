@@ -320,8 +320,7 @@ p {
     transform: scale(1.1);
     z-index: 1; }
     .projectcontainer:hover .linkscontainer {
-      opacity: 1;
-      display: flex; }
+      opacity: 1; }
     .projectcontainer:hover .project-title-container, .projectcontainer:hover .techcontainer {
       opacity: 0; }
     .projectcontainer:hover .techcontainer {
@@ -348,15 +347,18 @@ p {
     opacity: 1;
     font-size: 10pt; }
   .projectcontainer .project-title-container, .projectcontainer .techcontainer {
-    opacity: 1;
+    opacity: 1 !important;
     position: relative;
     max-width: 250px;
-    padding: 0; }
+    padding: 5px 0; }
     .projectcontainer .project-title-container h4, .projectcontainer .techcontainer h4 {
       font-size: 14pt; }
+    .projectcontainer .project-title-container :hover, .projectcontainer .techcontainer :hover {
+      opacity: 1; }
   .projectcontainer .techcontainer {
     opacity: 1;
-    position: absolute; } }
+    position: relative;
+    padding: 5px 0; } }
 @media (max-width: 380px) {
   .menu {
     font-size: 17pt; }

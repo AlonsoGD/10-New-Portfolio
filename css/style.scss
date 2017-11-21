@@ -429,8 +429,6 @@ p {
 
 		.linkscontainer {
 			opacity: 1;
-			display: flex;
-
 		}
 
 		.project-title-container {
@@ -491,19 +489,24 @@ p {
 		}
 
 		.project-title-container {
-			opacity: 1;
+			opacity: 1 !important;
 			position: relative;
 			max-width: 250px;
-			padding: 0;
+			padding: 5px 0;
 
 			h4 {
 				font-size: $fontSize * 0.7;
+			}
+
+			:hover {
+				opacity: 1;
 			}
 		}
 
 		.techcontainer {
 			opacity: 1;
-			position: absolute;
+			position: relative;
+			padding: 5px 0;
 		}
 
 	}
