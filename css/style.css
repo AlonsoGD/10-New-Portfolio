@@ -329,6 +329,7 @@ p {
       opacity: 1;
       display: flex; }
       .projectcontainer:hover .linkscontainer .livelinkcontainer a, .projectcontainer:hover .linkscontainer .gitlinkcontainer a {
+        pointer-events: visible;
         cursor: pointer;
         display: inline-block; }
     .projectcontainer:hover .project-title-container, .projectcontainer:hover .techcontainer {
