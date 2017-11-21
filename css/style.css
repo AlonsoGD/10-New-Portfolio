@@ -108,6 +108,22 @@ html {
   -o-background-size: cover;
   background-size: cover; }
 
+/* unvisited link */
+a:link {
+  color: white; }
+
+/* visited link */
+a:visited {
+  color: white; }
+
+/* mouse over link */
+a:hover {
+  color: #69eeff; }
+
+/* selected link */
+a:active {
+  color: blue; }
+
 .pagelayout {
   height: 100%;
   display: flex;
@@ -250,35 +266,68 @@ p {
   max-width: 100%; }
 
 .projectcontainer {
-  position: relative; }
+  position: relative;
+  max-width: 400px;
+  height: auto;
+  display: block;
+  transition: all .3s ease-in-out;
+  margin: 10px; }
   .projectcontainer .imgcontainer {
-    background: black; }
-  .projectcontainer img {
-    opacity: 0.4;
+    background: black;
     display: block;
-    height: auto;
-    max-width: 400px;
-    transition: all .5s ease-in-out; }
-  .projectcontainer .project-title-container {
+    border: 3px solid #424242; }
+  .projectcontainer img {
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    transition: all .3s ease-in-out; }
+  .projectcontainer .project-title-container, .projectcontainer .techcontainer {
     position: absolute;
     text-align: center;
     width: 100%;
-    top: 25%;
+    top: 35%;
     padding: 0 35px;
-    transition: opacity .3s ease-in-out; }
-    .projectcontainer .project-title-container h4 {
-      font-size: 24pt; }
+    transition: opacity .3s ease-in-out;
+    text-decoration: underline; }
+    .projectcontainer .project-title-container h4, .projectcontainer .techcontainer h4 {
+      font-size: 20pt; }
+  .projectcontainer .techcontainer {
+    text-decoration: unset;
+    top: 70%;
+    opacity: 0; }
+    .projectcontainer .techcontainer h4 {
+      font-size: 34pt; }
+  .projectcontainer .icon {
+    color: white;
+    width: 50px;
+    height: auto; }
   .projectcontainer .linkscontainer {
     position: absolute;
     width: 100%;
     text-align: center;
-    top: 45%;
+    top: 20%;
+    opacity: 0;
     display: flex;
-    flex-direction: row; }
+    flex-direction: row;
+    transition: all .3s ease-in-out; }
     .projectcontainer .linkscontainer .livelinkcontainer, .projectcontainer .linkscontainer .gitlinkcontainer {
       width: 50%; }
-  .projectcontainer:hover .project-title-container {
+    .projectcontainer .linkscontainer .livelinkcontainer {
+      border-right: 1px solid white; }
+    .projectcontainer .linkscontainer .gitlinkcontainer {
+      border-left: 1px solid white; }
+  .projectcontainer:hover .linkscontainer {
+    opacity: 1; }
+  .projectcontainer:hover .project-title-container, .projectcontainer:hover .techcontainer {
     opacity: 0; }
+  .projectcontainer:hover .techcontainer {
+    opacity: 1; }
+  .projectcontainer:hover img {
+    opacity: 0.2; }
+  .projectcontainer:hover {
+    box-shadow: 2px 2px 15px 5px rgba(0, 0, 0, 0.75);
+    transform: scale(1.1);
+    z-index: 1; }
 
 @media (max-width: 907px) {
   .pagelayout {
@@ -297,9 +346,23 @@ p {
 @media (max-width: 450px) {
   .projectcontainer img {
     max-width: 250px; }
-
-  .projectcontainer .project-title-container h4 {
-    font-size: 18pt; } }
+  .projectcontainer .project-title-container h4, .projectcontainer .techcontainer h4 {
+    font-size: 18pt; }
+  .projectcontainer .linkscontainer {
+    top: 15%;
+    padding: 0;
+    opacity: 1;
+    font-size: 10pt; }
+  .projectcontainer .project-title-container, .projectcontainer .techcontainer {
+    opacity: 1;
+    position: relative;
+    max-width: 250px;
+    padding: 0; }
+    .projectcontainer .project-title-container h4, .projectcontainer .techcontainer h4 {
+      font-size: 14pt; }
+  .projectcontainer .techcontainer {
+    opacity: 0;
+    position: absolute; } }
 @media (max-width: 380px) {
   .menu {
     font-size: 17pt; }

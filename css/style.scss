@@ -130,6 +130,28 @@ html {
 	// 	background-size: cover;
 	// }
 }
+
+/* unvisited link */
+a:link {
+    color: white;
+}
+
+/* visited link */
+a:visited {
+    color: rgb(255, 255, 255);
+}
+
+/* mouse over link */
+a:hover {
+    color: rgb(105, 238, 255);
+}
+
+/* selected link */
+a:active {
+    color: blue;
+}
+
+
 .pagelayout {
 	height: 100%;
 	display: flex;
@@ -324,51 +346,104 @@ p {
 .projectcontainer {
 	
 	position: relative;
-
+	max-width: 400px;
+	height: auto;
+	display: block;
+	transition: all .3s ease-in-out;
+	margin: 10px;
 	
-
+	
 	.imgcontainer {
 		background: rgb(0, 0, 0);
+		display: block;
+		border: 3px solid rgb(66, 66, 66);
 	}
 	
 	img {
+		width: 100%;
+		height: 100%;
 		opacity: 0.4;
-		display: block;
-		height: auto;
-		max-width: 400px;
-		transition: all .5s ease-in-out;
+		transition: all .3s ease-in-out;
 	}
 		
 	.project-title-container {
 		position: absolute;
 		text-align: center;    
 		width: 100%;
-		top: 25%;
+		top: 35%;
 		padding: 0 35px;
 		transition: opacity .3s ease-in-out;
+		text-decoration: underline;
 		
 		& h4 {
-			font-size: $fontSize * 1.2;
+			font-size: $fontSize;
 		}
+	}
+
+	.techcontainer {
+		@extend .project-title-container;
+		text-decoration: unset;
+		top: 70%;
+		opacity: 0;
+
+		& h4 {
+			font-size: $fontSize * 1.7;
+		}
+	}
+
+	.icon {
+		color: white;
+		width: 50px;
+		height: auto;
 	}
 
 	.linkscontainer {
 		position: absolute;
 		width: 100%;
 		text-align: center;
-		top: 45%;
+		top: 20%;
+		opacity: 0;
 
 		display: flex;
 		flex-direction: row;
+		
+		transition: all .3s ease-in-out;
 
 		.livelinkcontainer, .gitlinkcontainer {
 			width: 50%;
 		}
+
+		.livelinkcontainer {
+			border-right: 1px solid white;
+		}
+
+		.gitlinkcontainer {
+			border-left: 1px solid white;
+		}
+
 	}
 	
+	&:hover .linkscontainer {
+		opacity: 1;
+	}
+
 	&:hover .project-title-container {
 		opacity: 0;
 	}
+
+	&:hover .techcontainer {
+		opacity: 1;
+	}
+
+	&:hover img {
+		opacity: 0.2;
+	}
+	&:hover {
+		box-shadow: 2px 2px 15px 5px rgba(0, 0, 0, 0.75);
+		transform: scale(1.1);
+		z-index: 1;
+	}
+
 
 }
 
@@ -400,11 +475,35 @@ p {
 		& img {
 			max-width: 250px;
 		}
-	}
 
-	.projectcontainer .project-title-container h4 {
-		font-size: $fontSize * 0.9; 
-	} 
+		.project-title-container h4 {
+			font-size: $fontSize * 0.9; 
+		} 
+
+		.linkscontainer {
+			top: 15%;
+			padding: 0;
+			opacity: 1;
+			font-size: $fontSize * 0.5;
+		}
+
+		.project-title-container {
+			opacity: 1;
+			position: relative;
+			max-width: 250px;
+			padding: 0;
+
+			h4 {
+				font-size: $fontSize * 0.7;
+			}
+		}
+
+		.techcontainer {
+			opacity: 0;
+			position: absolute;
+		}
+
+	}
 }
 
 @media (max-width: 380px) {
