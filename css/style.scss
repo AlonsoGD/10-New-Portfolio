@@ -123,12 +123,6 @@ html {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-
-
-	// &.darken {
-	// 	background: url("../media/backgroundimage-small-darken.png") no-repeat center center fixed; 
-	// 	background-size: cover;
-	// }
 }
 
 /* unvisited link */
@@ -162,6 +156,7 @@ a:active {
 	justify-content: center;
 	align-items: center;
 	align-content: center;
+	overflow-y: auto;
 
 	font-family: 'Montserrat';
 
@@ -171,7 +166,6 @@ a:active {
 
 	&.darken {
 		background: rgba(0, 0, 0, 0.80);
-		background-size: cover !important;
 	}
 }
 
@@ -449,15 +443,9 @@ p {
 }
 
 @media (max-width: 907px) {
-	.pagelayout {
-		//height: unset;
-	}
-
-	.standardlayout {
-		//flex-direction: column;
-	}
 
 }
+
 @media (max-width: 740px) {
 	.mainpage {
 		flex-direction: column;
@@ -507,6 +495,12 @@ p {
 			opacity: 1;
 			position: relative;
 			padding: 5px 0;
+		}
+
+		&:hover {
+			box-shadow: none;
+			transform: scale(1.1);
+			z-index: 1;
 		}
 
 	}
