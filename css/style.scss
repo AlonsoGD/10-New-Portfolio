@@ -406,18 +406,10 @@ p {
 		display: flex;
 		flex-direction: row;
 		
-		display: none;
 		transition: all .3s ease-in-out;
 
 		.livelinkcontainer, .gitlinkcontainer {
 			width: 50%;
-
-			a {
-				display: none;
-				pointer-events: none;
-				cursor: default;
-				transition: all .3s ease-in-out;
-			}
 		}
 
 		.livelinkcontainer {
@@ -438,15 +430,6 @@ p {
 		.linkscontainer {
 			opacity: 1;
 			display: flex;
-
-			.livelinkcontainer, .gitlinkcontainer {
-
-				a {
-					pointer-events: visible;
-					cursor: pointer;
-					display: inline-block;
-				}
-			}
 
 		}
 
@@ -503,13 +486,13 @@ p {
 		.linkscontainer {
 			top: 15%;
 			padding: 0;
-			//opacity: 1;
+			opacity: 1;
 			font-size: $fontSize * 0.5;
 		}
 
 		.project-title-container {
-			//opacity: 1;
-			//position: relative;
+			opacity: 1;
+			position: relative;
 			max-width: 250px;
 			padding: 0;
 
@@ -519,7 +502,7 @@ p {
 		}
 
 		.techcontainer {
-			opacity: 0;
+			opacity: 1;
 			position: absolute;
 		}
 

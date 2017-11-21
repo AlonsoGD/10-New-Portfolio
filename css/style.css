@@ -308,15 +308,9 @@ p {
     opacity: 0;
     display: flex;
     flex-direction: row;
-    display: none;
     transition: all .3s ease-in-out; }
     .projectcontainer .linkscontainer .livelinkcontainer, .projectcontainer .linkscontainer .gitlinkcontainer {
       width: 50%; }
-      .projectcontainer .linkscontainer .livelinkcontainer a, .projectcontainer .linkscontainer .gitlinkcontainer a {
-        display: none;
-        pointer-events: none;
-        cursor: default;
-        transition: all .3s ease-in-out; }
     .projectcontainer .linkscontainer .livelinkcontainer {
       border-right: 1px solid white; }
     .projectcontainer .linkscontainer .gitlinkcontainer {
@@ -328,10 +322,6 @@ p {
     .projectcontainer:hover .linkscontainer {
       opacity: 1;
       display: flex; }
-      .projectcontainer:hover .linkscontainer .livelinkcontainer a, .projectcontainer:hover .linkscontainer .gitlinkcontainer a {
-        pointer-events: visible;
-        cursor: pointer;
-        display: inline-block; }
     .projectcontainer:hover .project-title-container, .projectcontainer:hover .techcontainer {
       opacity: 0; }
     .projectcontainer:hover .techcontainer {
@@ -355,14 +345,17 @@ p {
   .projectcontainer .linkscontainer {
     top: 15%;
     padding: 0;
+    opacity: 1;
     font-size: 10pt; }
   .projectcontainer .project-title-container, .projectcontainer .techcontainer {
+    opacity: 1;
+    position: relative;
     max-width: 250px;
     padding: 0; }
     .projectcontainer .project-title-container h4, .projectcontainer .techcontainer h4 {
       font-size: 14pt; }
   .projectcontainer .techcontainer {
-    opacity: 0;
+    opacity: 1;
     position: absolute; } }
 @media (max-width: 380px) {
   .menu {
