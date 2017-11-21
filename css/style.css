@@ -313,6 +313,7 @@ p {
     .projectcontainer .linkscontainer .livelinkcontainer, .projectcontainer .linkscontainer .gitlinkcontainer {
       width: 50%; }
       .projectcontainer .linkscontainer .livelinkcontainer a, .projectcontainer .linkscontainer .gitlinkcontainer a {
+        display: none;
         pointer-events: none;
         cursor: default;
         transition: all .3s ease-in-out; }
@@ -328,8 +329,8 @@ p {
       opacity: 1;
       display: flex; }
       .projectcontainer:hover .linkscontainer .livelinkcontainer a, .projectcontainer:hover .linkscontainer .gitlinkcontainer a {
-        pointer-events: visible;
-        cursor: pointer; }
+        cursor: pointer;
+        display: inline-block; }
     .projectcontainer:hover .project-title-container, .projectcontainer:hover .techcontainer {
       opacity: 0; }
     .projectcontainer:hover .techcontainer {

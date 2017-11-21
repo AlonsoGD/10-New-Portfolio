@@ -413,6 +413,7 @@ p {
 			width: 50%;
 
 			a {
+				display: none;
 				pointer-events: none;
 				cursor: default;
 				transition: all .3s ease-in-out;
@@ -441,8 +442,9 @@ p {
 			.livelinkcontainer, .gitlinkcontainer {
 
 				a {
-					pointer-events: visible;
+					//pointer-events: visible;
 					cursor: pointer;
+					display: inline-block;
 				}
 			}
 
