@@ -281,7 +281,7 @@ p {
 }
 
 .standardlayout {
-	opacity: 1;
+	opacity: 0;
 	display: flex;
 	flex-direction: row;
 	align-items: flex-start;
@@ -408,6 +408,11 @@ p {
 		
 		transition: all .3s ease-in-out;
 
+		a {
+			pointer-events: none;
+			cursor: default;
+		}
+
 		.livelinkcontainer, .gitlinkcontainer {
 			width: 50%;
 		}
@@ -429,6 +434,12 @@ p {
 
 		.linkscontainer {
 			opacity: 1;
+
+			a {
+				pointer-events: visible;
+				cursor: pointer;
+			}
+
 		}
 
 		.project-title-container {
