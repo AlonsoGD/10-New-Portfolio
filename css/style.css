@@ -148,6 +148,9 @@ p {
   font-size: 17pt;
   transition: font-size .5s ease-in-out; }
 
+small {
+  font-size: 10pt; }
+
 .center {
   text-align: center; }
 
@@ -226,7 +229,7 @@ p {
   margin: 30px;
   transition: all 1s ease-in-out; }
 
-.descriptioncontainer, .skillsgrid, .portfoliogrid {
+.descriptioncontainer, .skillsgrid, .portfoliogrid, .prexpgrid {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -265,23 +268,23 @@ p {
   padding: 15px;
   max-width: 100%; }
 
-.projectcontainer {
+.projectcontainer, .dashboardcontainer, .dashboardcontainer-vertical {
   position: relative;
-  max-width: 400px;
+  max-width: 380px;
   height: auto;
   display: block;
   transition: all .3s ease-in-out;
   margin: 10px; }
-  .projectcontainer .imgcontainer {
+  .projectcontainer .imgcontainer, .dashboardcontainer .imgcontainer, .dashboardcontainer-vertical .imgcontainer {
     background: black;
     display: block;
     border: 2px solid #fffefe; }
-  .projectcontainer img {
+  .projectcontainer img, .dashboardcontainer img, .dashboardcontainer-vertical img {
     width: 100%;
     height: 100%;
     opacity: 0.4;
     transition: all .3s ease-in-out; }
-  .projectcontainer .project-title-container, .projectcontainer .techcontainer {
+  .projectcontainer .project-title-container, .dashboardcontainer .project-title-container, .dashboardcontainer-vertical .project-title-container, .projectcontainer .techcontainer, .dashboardcontainer .techcontainer, .dashboardcontainer-vertical .techcontainer {
     position: absolute;
     text-align: center;
     width: 100%;
@@ -289,18 +292,18 @@ p {
     padding: 0 35px;
     transition: opacity .3s ease-in-out;
     text-decoration: underline; }
-    .projectcontainer .project-title-container h4, .projectcontainer .techcontainer h4 {
+    .projectcontainer .project-title-container h4, .dashboardcontainer .project-title-container h4, .dashboardcontainer-vertical .project-title-container h4, .projectcontainer .techcontainer h4, .dashboardcontainer .techcontainer h4, .dashboardcontainer-vertical .techcontainer h4 {
       font-size: 20pt; }
-  .projectcontainer .techcontainer {
+  .projectcontainer .techcontainer, .dashboardcontainer .techcontainer, .dashboardcontainer-vertical .techcontainer {
     text-decoration: unset;
     top: 70%;
     opacity: 0; }
-    .projectcontainer .techcontainer h4 {
+    .projectcontainer .techcontainer h4, .dashboardcontainer .techcontainer h4, .dashboardcontainer-vertical .techcontainer h4 {
       font-size: 34pt; }
-  .projectcontainer .icon {
+  .projectcontainer .icon, .dashboardcontainer .icon, .dashboardcontainer-vertical .icon {
     width: 50px;
     height: auto; }
-  .projectcontainer .linkscontainer {
+  .projectcontainer .linkscontainer, .dashboardcontainer .linkscontainer, .dashboardcontainer-vertical .linkscontainer {
     position: absolute;
     width: 100%;
     text-align: center;
@@ -309,25 +312,58 @@ p {
     display: flex;
     flex-direction: row;
     transition: all .3s ease-in-out; }
-    .projectcontainer .linkscontainer .livelinkcontainer, .projectcontainer .linkscontainer .gitlinkcontainer {
+    .projectcontainer .linkscontainer .livelinkcontainer, .dashboardcontainer .linkscontainer .livelinkcontainer, .dashboardcontainer-vertical .linkscontainer .livelinkcontainer, .projectcontainer .linkscontainer .gitlinkcontainer, .dashboardcontainer .linkscontainer .gitlinkcontainer, .dashboardcontainer-vertical .linkscontainer .gitlinkcontainer {
       width: 50%; }
-    .projectcontainer .linkscontainer .livelinkcontainer {
+    .projectcontainer .linkscontainer .livelinkcontainer, .dashboardcontainer .linkscontainer .livelinkcontainer, .dashboardcontainer-vertical .linkscontainer .livelinkcontainer {
       border-right: 1px solid white; }
-    .projectcontainer .linkscontainer .gitlinkcontainer {
+    .projectcontainer .linkscontainer .gitlinkcontainer, .dashboardcontainer .linkscontainer .gitlinkcontainer, .dashboardcontainer-vertical .linkscontainer .gitlinkcontainer {
       border-left: 1px solid white; }
-  .projectcontainer:hover {
+  .projectcontainer:hover, .dashboardcontainer:hover, .dashboardcontainer-vertical:hover {
     box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.75);
     transform: scale(1.1);
     z-index: 1; }
-    .projectcontainer:hover .linkscontainer {
+    .projectcontainer:hover .linkscontainer, .dashboardcontainer:hover .linkscontainer, .dashboardcontainer-vertical:hover .linkscontainer {
       opacity: 1; }
-    .projectcontainer:hover .project-title-container, .projectcontainer:hover .techcontainer {
+    .projectcontainer:hover .project-title-container, .dashboardcontainer:hover .project-title-container, .dashboardcontainer-vertical:hover .project-title-container, .projectcontainer:hover .techcontainer, .dashboardcontainer:hover .techcontainer, .dashboardcontainer-vertical:hover .techcontainer {
       opacity: 0; }
-    .projectcontainer:hover .techcontainer {
+    .projectcontainer:hover .techcontainer, .dashboardcontainer:hover .techcontainer, .dashboardcontainer-vertical:hover .techcontainer {
       opacity: 1; }
-    .projectcontainer:hover img {
+    .projectcontainer:hover img, .dashboardcontainer:hover img, .dashboardcontainer-vertical:hover img {
       opacity: 0.2; }
 
+.prexpcontainer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 15px;
+  justify-content: center;
+  align-items: center;
+  align-content: center; }
+
+.prexpgrid {
+  padding: 15px;
+  max-width: 90%; }
+
+.marginsides {
+  margin: 0 100px; }
+
+.dashboardcontainer, .dashboardcontainer-vertical {
+  max-width: 340px;
+  border: 2px solid #fffefe; }
+  .dashboardcontainer .project-title-container h4, .dashboardcontainer-vertical .project-title-container h4, .dashboardcontainer .techcontainer h4, .dashboardcontainer-vertical .techcontainer h4 {
+    font-size: 18pt; }
+  .dashboardcontainer:hover img, .dashboardcontainer-vertical:hover img {
+    opacity: 0.2; }
+
+.dashboardcontainer-vertical {
+  max-width: 200px;
+  height: 350px; }
+  .dashboardcontainer-vertical .project-title-container h4, .dashboardcontainer-vertical .techcontainer h4 {
+    font-size: 16pt; }
+
+@media (max-width: 907px) {
+  .marginsides {
+    margin: 0 0; } }
 @media (max-width: 740px) {
   .mainpage {
     flex-direction: column; }
@@ -337,29 +373,29 @@ p {
     border-right: unset;
     border-bottom: 2px solid white; } }
 @media (max-width: 450px) {
-  .projectcontainer img {
+  .projectcontainer img, .dashboardcontainer img, .dashboardcontainer-vertical img {
     max-width: 250px; }
-  .projectcontainer .project-title-container h4, .projectcontainer .techcontainer h4 {
+  .projectcontainer .project-title-container h4, .dashboardcontainer .project-title-container h4, .dashboardcontainer-vertical .project-title-container h4, .projectcontainer .techcontainer h4, .dashboardcontainer .techcontainer h4, .dashboardcontainer-vertical .techcontainer h4 {
     font-size: 18pt; }
-  .projectcontainer .linkscontainer {
+  .projectcontainer .linkscontainer, .dashboardcontainer .linkscontainer, .dashboardcontainer-vertical .linkscontainer {
     top: 15%;
     padding: 0;
     opacity: 1;
     font-size: 10pt; }
-  .projectcontainer .project-title-container, .projectcontainer .techcontainer {
+  .projectcontainer .project-title-container, .dashboardcontainer .project-title-container, .dashboardcontainer-vertical .project-title-container, .projectcontainer .techcontainer, .dashboardcontainer .techcontainer, .dashboardcontainer-vertical .techcontainer {
     opacity: 1 !important;
     position: relative;
     max-width: 250px;
     padding: 5px 0; }
-    .projectcontainer .project-title-container h4, .projectcontainer .techcontainer h4 {
+    .projectcontainer .project-title-container h4, .dashboardcontainer .project-title-container h4, .dashboardcontainer-vertical .project-title-container h4, .projectcontainer .techcontainer h4, .dashboardcontainer .techcontainer h4, .dashboardcontainer-vertical .techcontainer h4 {
       font-size: 14pt; }
-    .projectcontainer .project-title-container :hover, .projectcontainer .techcontainer :hover {
+    .projectcontainer .project-title-container :hover, .dashboardcontainer .project-title-container :hover, .dashboardcontainer-vertical .project-title-container :hover, .projectcontainer .techcontainer :hover, .dashboardcontainer .techcontainer :hover, .dashboardcontainer-vertical .techcontainer :hover {
       opacity: 1; }
-  .projectcontainer .techcontainer {
+  .projectcontainer .techcontainer, .dashboardcontainer .techcontainer, .dashboardcontainer-vertical .techcontainer {
     opacity: 1;
     position: relative;
     padding: 5px 0; }
-  .projectcontainer:hover {
+  .projectcontainer:hover, .dashboardcontainer:hover, .dashboardcontainer-vertical:hover {
     box-shadow: none;
     transform: scale(1.1);
     z-index: 1; } }

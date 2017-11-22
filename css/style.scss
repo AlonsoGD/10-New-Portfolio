@@ -182,6 +182,10 @@ p {
 	transition: font-size .5s ease-in-out;
 }
 
+small {
+	font-size: $fontSize * 0.5;
+}
+
 .center {
 	text-align: center;
 }
@@ -340,7 +344,7 @@ p {
 .projectcontainer {
 	
 	position: relative;
-	max-width: 400px;
+	max-width: 380px;
 	height: auto;
 	display: block;
 	transition: all .3s ease-in-out;
@@ -436,14 +440,62 @@ p {
 		img {
 			opacity: 0.2;
 		}
+	}
+}
 
+.prexpcontainer {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	padding: 15px;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+
+.prexpgrid {
+	@extend .descriptioncontainer;
+	padding: 15px;
+	max-width: 90%;
+}
+
+.marginsides {
+	margin: 0 100px;
+}
+
+.dashboardcontainer {
+	@extend .projectcontainer;	
+	max-width: 340px;
+	border: 2px solid rgb(255, 254, 254);	
+			
+	.project-title-container {
+	
+		& h4 {
+			font-size: $fontSize * 0.9;
+		}
 	}
 
+	&:hover img {
+		opacity: 0.2;
+	}
+}
 
+.dashboardcontainer-vertical {
+	@extend .dashboardcontainer;
+	max-width: 200px;
+	height: 350px;
+
+	.project-title-container {
+		& h4 {
+			font-size: $fontSize * 0.8;
+		}
+	}
 }
 
 @media (max-width: 907px) {
-
+	.marginsides {
+		margin: 0 0;
+	}
 }
 
 @media (max-width: 740px) {
