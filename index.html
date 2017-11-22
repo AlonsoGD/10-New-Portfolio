@@ -21,11 +21,11 @@
     <!-- File links -->
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js"></script>
+    <!-- <script src="js/script.js"></script> -->
 </head>
 <body>
     <div class="pagelayout">
-        <main class="screen mainpage" id="mainpage">
+        <!-- <main class="screen mainpage" id="mainpage">
             <header class="titles">
                 <h1>Daniel Alonso</h1> 
                 <h2>Web Developer</h2>
@@ -418,13 +418,24 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     
         <div class="screen standardlayout" id="contact">
             <div>
                 <h1>Contact:</h1>
                 <button class="homebutton animated fadeInLeft" id="backb">BACK</button>
-            </div> 
+            </div>
+            <div>
+                <p>Shoot me an email!</p>
+                <form method="POST" action="http://formspree.io/dani.alonso.garcia@gmail.com">
+                    <input type="text" name="name" placeholder="Your Name">
+                    <input type="email" name="_replyto" placeholder="Your email">
+                    <input class="hidden" type="text" name="_gotcha">
+                    <input class="hidden" type="hidden" name="_subject" placeholder="Contact from your portfolio">
+                    <textarea name="message" placeholder="message"></textarea>
+                    <button class="mainbuttonskin" style="opacity: 1;" type="submit">Send</button>
+                </form>
+            </div>  
         </div>     
     </div>
 </body>
