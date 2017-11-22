@@ -464,8 +464,10 @@ small {
 }
 
 .dashboardcontainer {
-	@extend .projectcontainer;	
-	max-width: 340px;
+	@extend .projectcontainer;
+	background-color: black;	
+	max-width: 325px;
+	height: 200px;
 	border: 2px solid rgb(255, 254, 254);	
 			
 	.project-title-container {
@@ -475,14 +477,17 @@ small {
 		}
 	}
 
+	&:focus {
+		outline: none;
+	}
+
 	&:hover img {
-		opacity: 0.2;
+		opacity: 0.8;
 	}
 }
 
 .dashboardcontainer-vertical {
 	@extend .dashboardcontainer;
-	max-width: 200px;
 	height: 350px;
 
 	.project-title-container {
@@ -516,10 +521,6 @@ small {
 		& img {
 			max-width: 250px;
 		}
-
-		.project-title-container h4 {
-			font-size: $fontSize * 0.9; 
-		} 
 
 		.linkscontainer {
 			top: 15%;
@@ -555,6 +556,12 @@ small {
 			z-index: 1;
 		}
 
+	}
+	.dashboardcontainer {
+		.project-title-container{
+			position: absolute;
+			padding: 0 15px;
+		}
 	}
 }
 

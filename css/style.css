@@ -348,15 +348,18 @@ small {
   margin: 0 100px; }
 
 .dashboardcontainer, .dashboardcontainer-vertical {
-  max-width: 340px;
+  background-color: black;
+  max-width: 325px;
+  height: 200px;
   border: 2px solid #fffefe; }
   .dashboardcontainer .project-title-container h4, .dashboardcontainer-vertical .project-title-container h4, .dashboardcontainer .techcontainer h4, .dashboardcontainer-vertical .techcontainer h4 {
     font-size: 18pt; }
+  .dashboardcontainer:focus, .dashboardcontainer-vertical:focus {
+    outline: none; }
   .dashboardcontainer:hover img, .dashboardcontainer-vertical:hover img {
-    opacity: 0.2; }
+    opacity: 0.8; }
 
 .dashboardcontainer-vertical {
-  max-width: 200px;
   height: 350px; }
   .dashboardcontainer-vertical .project-title-container h4, .dashboardcontainer-vertical .techcontainer h4 {
     font-size: 16pt; }
@@ -375,8 +378,6 @@ small {
 @media (max-width: 450px) {
   .projectcontainer img, .dashboardcontainer img, .dashboardcontainer-vertical img {
     max-width: 250px; }
-  .projectcontainer .project-title-container h4, .dashboardcontainer .project-title-container h4, .dashboardcontainer-vertical .project-title-container h4, .projectcontainer .techcontainer h4, .dashboardcontainer .techcontainer h4, .dashboardcontainer-vertical .techcontainer h4 {
-    font-size: 18pt; }
   .projectcontainer .linkscontainer, .dashboardcontainer .linkscontainer, .dashboardcontainer-vertical .linkscontainer {
     top: 15%;
     padding: 0;
@@ -398,7 +399,11 @@ small {
   .projectcontainer:hover, .dashboardcontainer:hover, .dashboardcontainer-vertical:hover {
     box-shadow: none;
     transform: scale(1.1);
-    z-index: 1; } }
+    z-index: 1; }
+
+  .dashboardcontainer .project-title-container, .dashboardcontainer-vertical .project-title-container, .dashboardcontainer .techcontainer, .dashboardcontainer-vertical .techcontainer {
+    position: absolute;
+    padding: 0 15px; } }
 @media (max-width: 380px) {
   .menu {
     font-size: 17pt; }
