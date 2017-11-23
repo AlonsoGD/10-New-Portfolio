@@ -375,7 +375,7 @@ form, textarea, input {
   font-size: 16pt; }
   form:focus, textarea:focus, input:focus {
     outline: none;
-    box-shadow: 0 0 3pt 2pt #00ffea; }
+    box-shadow: 0 0 3pt 2px #00ffea; }
 
 input {
   height: 40px;
