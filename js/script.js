@@ -21,6 +21,8 @@ $(document).ready(function () {
     };
     var $titles =  $('.titles');
 
+    var stateObj = { foo: "bar" };
+
     function introAnimation () {
         
         function animationWithTimeout (element, delay) {
@@ -116,6 +118,7 @@ $(document).ready(function () {
     $buttonsObj.aboutmeb.click(function (){
         hideMainPage();
         showElement($screensObj.aboutme);
+        history.pushState(stateObj, "page 2", "aboutme.html");
     })
 
     //Clicking skills button
