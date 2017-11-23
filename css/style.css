@@ -176,21 +176,21 @@ small {
     width: 100%;
     background: white; }
 
-.homebutton {
+.homebutton, .sendbutton {
   opacity: 0;
   margin: 10px;
   padding: 5px 15px;
   transition: all .1s linear;
   font-size: 20pt;
   border: 2px solid white; }
-  .homebutton:hover {
+  .homebutton:hover, .sendbutton:hover {
     cursor: pointer;
     color: #9e9e9e;
     border: 2px solid #b3b2b2;
     text-shadow: 2px 2px 7px black; }
-  .homebutton:focus {
+  .homebutton:focus, .sendbutton:focus {
     outline: 0; }
-  .homebutton.clicked {
+  .homebutton.clicked, .clicked.sendbutton {
     text-shadow: unset;
     color: white; }
 
@@ -221,7 +221,7 @@ small {
   transition: font-size .5s ease-in-out; }
 
 .standardlayout {
-  opacity: 1;
+  opacity: 0;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -365,6 +365,37 @@ small {
     font-size: 16pt; }
 
 .hidden {
+  display: none; }
+
+form, textarea, input {
+  width: 100%;
+  margin: 10px 0px;
+  border-radius: 5px;
+  font-family: 'Montserrat';
+  font-size: 16pt; }
+  form:focus, textarea:focus, input:focus {
+    outline: none;
+    box-shadow: 0 0 3pt 2pt #00ffea; }
+
+input {
+  height: 40px;
+  padding: 5px 10px;
+  border: 1px solid #ccc; }
+
+textarea {
+  resize: vertical;
+  padding: 10px 10px;
+  height: 200px;
+  border: 1px solid #ccc; }
+
+.responsive {
+  width: 90%;
+  max-width: 600px; }
+
+.padding {
+  padding: 15px 15px 0px 15px; }
+
+.sendbutton:after {
   display: none; }
 
 @media (max-width: 907px) {
