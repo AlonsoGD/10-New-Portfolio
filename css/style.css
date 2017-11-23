@@ -549,7 +549,9 @@ textarea {
 
   .dashboardcontainer .project-title-container, .dashboardcontainer-vertical .project-title-container, .dashboardcontainer .techcontainer, .dashboardcontainer-vertical .techcontainer {
     position: absolute;
-    padding: 0 15px; } }
+    padding: 0 15px; }
+  .dashboardcontainer .dashboardcontainer-vertical, .dashboardcontainer-vertical .dashboardcontainer-vertical {
+    height: unset; } }
 @media (max-width: 380px) {
   .menu {
     font-size: 17pt; }
