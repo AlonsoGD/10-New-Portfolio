@@ -372,10 +372,10 @@ form, textarea, input {
   margin: 10px 0px;
   border-radius: 5px;
   font-family: 'Montserrat';
-  font-size: 16pt; }
+  font-size: 14pt; }
   form:focus, textarea:focus, input:focus {
     outline: none;
-    box-shadow: 0 0 3pt 2px #00ffea; }
+    box-shadow: 0 0 7pt 2px #00ffea; }
 
 input {
   height: 40px;
@@ -386,7 +386,8 @@ textarea {
   resize: vertical;
   padding: 10px 10px;
   height: 200px;
-  border: 1px solid #ccc; }
+  border: 1px solid #ccc;
+  overflow-x: hidden; }
 
 .responsive {
   width: 90%;
