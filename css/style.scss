@@ -707,6 +707,10 @@ textarea {
 			font-size: $fontSize * 0.5;
 		}
 
+		.imgcontainer {
+			height: 125px;
+		}
+
 		.project-title-container {
 			opacity: 1 !important;
 			position: relative;
@@ -755,5 +759,12 @@ textarea {
 	}
 	h1 {
 		font-size: $fontSize * 1.4;
+	}
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	/* IE10+ CSS styles go here */
+	.descriptioncontainer {
+		max-width: 1400px !important;
 	}
 }

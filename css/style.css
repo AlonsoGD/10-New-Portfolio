@@ -524,6 +524,8 @@ textarea {
     padding: 0;
     opacity: 1;
     font-size: 10pt; }
+  .projectcontainer .imgcontainer, .dashboardcontainer .imgcontainer, .dashboardcontainer-vertical .imgcontainer {
+    height: 125px; }
   .projectcontainer .project-title-container, .dashboardcontainer .project-title-container, .dashboardcontainer-vertical .project-title-container, .projectcontainer .techcontainer, .dashboardcontainer .techcontainer, .dashboardcontainer-vertical .techcontainer {
     opacity: 1 !important;
     position: relative;
@@ -557,5 +559,9 @@ textarea {
 
   h1 {
     font-size: 28pt; } }
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /* IE10+ CSS styles go here */
+  .descriptioncontainer, .skillsgrid, .portfoliogrid, .prexpgrid {
+    max-width: 1400px !important; } }
 
 /*# sourceMappingURL=style.css.map */
