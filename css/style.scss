@@ -658,6 +658,14 @@ textarea {
 	max-width: 600px;
 }
 
+.socialmediacontainer {
+	padding: 15px 0px 5px 15px;
+
+	.socialmediaicon {
+		padding: 0px 5px;
+	}
+}
+
 .padding {
 	padding: 15px 15px 0px 15px;
 }
@@ -676,7 +684,7 @@ textarea {
 	}
 }
 
-@media (max-width: 740px) {
+@media (max-width: 785px) {
 	.mainpage {
 		-webkit-box-orient: vertical;
 		-webkit-box-direction: normal;
@@ -690,6 +698,10 @@ textarea {
 		        align-items: flex-start;
 		border-right: unset;
 		border-bottom: 2px solid white;
+	}
+
+	.socialmediacontainer {
+		padding-left: 0px;
 	}
 
 }
