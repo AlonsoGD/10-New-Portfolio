@@ -352,7 +352,7 @@ small {
   .projectcontainer .imgcontainer, .dashboardcontainer .imgcontainer, .dashboardcontainer-vertical .imgcontainer {
     background: black;
     display: block;
-    border: 2px solid #fffefe;
+    border: 1px solid #fffefe;
     height: 190px; }
   .projectcontainer img, .dashboardcontainer img, .dashboardcontainer-vertical img {
     width: 100%;
