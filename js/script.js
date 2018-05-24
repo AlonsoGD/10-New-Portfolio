@@ -116,38 +116,38 @@ $(document).ready(function () {
     $buttonsObj.aboutmeb.click(function (){
         hideMainPage();
         showElement($screensObj.aboutme);
-        history.pushState(null, null, "aboutme.html")
+        history.pushState(null, null, "aboutme")
     })
 
     //Clicking skills button
     $buttonsObj.skillsb.click(function (){
         hideMainPage();
         showElement($screensObj.skills);
-        history.pushState(null, null, "skills.html");
+        history.pushState(null, null, "skills");
     })
     //Clicking porfolio button
     $buttonsObj.portfoliob.click(function (){
         hideMainPage();
         showElement($screensObj.portfolio);
-        history.pushState(null, null, "portfolio.html");
+        history.pushState(null, null, "portfolio");
     })
     //Clicking previous experience button
     $buttonsObj.previousexpb.click(function (){
         hideMainPage();
         showElement($screensObj.previusexp);
-        history.pushState(null, null, "previousexp.html");
+        history.pushState(null, null, "previousexp");
     })
     //Clicking contact button
     $buttonsObj.contactb.click(function (){
         hideMainPage();
         showElement($screensObj.contact);
-        history.pushState(null, null, "contact.html");
+        history.pushState(null, null, "contact");
     })
     //Clicking any of the BACK Buttons;
     $allBackButtons.click(function () {
         $titles.removeClass('animated fadeInRight');
         $allMainButtons.removeClass('animated fadeInRight');
-        history.pushState(null, null, "index.html");
+        history.pushState(null, null, "index");
         goBack();
     });
     window.addEventListener('popstate', function(e) {
