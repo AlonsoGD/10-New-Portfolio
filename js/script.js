@@ -147,6 +147,12 @@ $(document).ready(function () {
     $allBackButtons.click(function () {
         $titles.removeClass('animated fadeInRight');
         $allMainButtons.removeClass('animated fadeInRight');
+        history.pushState(null, null, "index.html");
         goBack();
+    });
+    window.addEventListener('popstate', function(e) {
+        $titles.removeClass('animated fadeInRight');
+        $allMainButtons.removeClass('animated fadeInRight');
+        goBack()
     });
 })
