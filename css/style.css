@@ -116,9 +116,7 @@ body.removeheight {
 }
 
 html {
-  background: url("../media/backgroundimage-small.png") no-repeat center center fixed;
-  background-size: cover;
-  background-color: #3a6374;
+  background: linear-gradient(to right, #416178 1%, #2b686b 50%, #13705d 100%);
 }
 
 /* unvisited link */
