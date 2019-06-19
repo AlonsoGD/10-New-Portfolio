@@ -120,6 +120,10 @@ html {
 	background: linear-gradient(to right, #416178 1%,#2b686b 50%,#13705d 100%);
 }
 
+.background-transition {
+	background: linear-gradient(to left, #1e2d38 1%,#183b3d 50%,#08332a 100%);
+}
+
 /* unvisited link */
 a:link {
     color: white;
@@ -201,6 +205,8 @@ p {
 	-o-transition: font-size .5s ease-in-out;
 
 	transition: font-size .5s ease-in-out;
+
+	line-height: $fontSize * 1.1;
 }
 
 small {
@@ -216,6 +222,7 @@ small {
 }
 
 .mainbuttonskin {
+	text-align: left;
 	opacity: 0;
 	padding: 5px;
 	-webkit-transition: all .1s linear;
@@ -579,11 +586,11 @@ small {
 .prexpgrid {
 	@extend .descriptioncontainer;
 	padding: 15px;
-	max-width: 90%;
+	max-width: 100%;
 }
 
 .marginsides {
-	margin: 0 100px;
+	margin: 0 50px;
 }
 
 .dashboardcontainer {
@@ -680,15 +687,16 @@ textarea {
 }
 
 @media (max-width: 907px) {
+	.maincontainer {
+		height: unset;
+		padding-top: 20px;
+	}
 	.marginsides {
 		margin: 0 0;
 	}
 }
 
 @media (max-width: 785px) {
-	.maincontainer {
-		height: unset;
-	}
 
 	.mainpage {
 		-webkit-box-orient: vertical;

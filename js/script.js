@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  var $html = $("html");
   var $body = $("body");
   var $allButtons = $("button");
   var $allMainButtons = $(".mainbuttonskin");
@@ -58,8 +59,8 @@ $(document).ready(function() {
   }
 
   function toggleBackground() {
+    $html.toggleClass("background-transition");
     //$body.toggleClass("darken");
-    $pagelayout.toggleClass("darken");
   }
 
   function hideMainPage() {
@@ -147,7 +148,7 @@ $(document).ready(function() {
   $allBackButtons.click(function() {
     $titles.removeClass("animated fadeInRight");
     $allMainButtons.removeClass("animated fadeInRight");
-    history.pushState(null, null, "index");
+    history.pushState(null, null, "index.html");
     goBack();
   });
   window.addEventListener("popstate", function(e) {
