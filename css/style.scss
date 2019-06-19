@@ -110,9 +110,6 @@ html, body {
 	height: 100%;
 }
 
-body {
-}
-
 body.removeheight {
 	height: unset;
 }
@@ -165,7 +162,6 @@ a:active {
 	        justify-content: center;
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
-	        align-items: center;
 	-ms-flex-line-pack: center;
 	    align-content: center;
 	overflow-y: auto;
@@ -179,10 +175,10 @@ a:active {
 	-o-transition: background .5s ease-in-out;
 
 	transition: background .5s ease-in-out;
+}
 
-	&.darken {
-		background: rgba(0, 0, 0, 0.80);
-	}
+.darken {
+	background: rgba(0, 0, 0, 0.80);
 }
 
 h1 {
@@ -212,6 +208,10 @@ small {
 
 .center {
 	text-align: center;
+}
+
+.maincontainer {
+	height: 100%
 }
 
 .mainbuttonskin {
@@ -685,6 +685,10 @@ textarea {
 }
 
 @media (max-width: 785px) {
+	.maincontainer {
+		height: unset;
+	}
+	
 	.mainpage {
 		-webkit-box-orient: vertical;
 		-webkit-box-direction: normal;
@@ -707,6 +711,7 @@ textarea {
 }
 
 @media (max-width: 450px) {
+
 	.projectcontainer {
 		& img {
 			max-width: 250px;
